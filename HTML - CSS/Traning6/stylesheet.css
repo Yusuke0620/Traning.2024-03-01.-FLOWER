@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body{
+  font-family: 'Crimson Text', serif;
+  color: #2d2d2d;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  width: 110px;
+}
+/* /ここまで共通設定 */
+
+/* mainVisual・nav
+------------------------------- */
+.mainVisual {
+  margin: 4% 4.5% 0;
+}
+.mainVisual img {
+  width: 90vw;
+}
+nav {
+  width: 90vw;
+  margin: 20px auto 55px;
+}
+.header-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-menu li {
+  margin-left: 30px;
+  font-size: 0.875rem;
+}
+
+/* section
+------------------------------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+}
+.container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+section img {
+  width: calc(100% / 2);
+}
+.text {
+  width: calc(100% / 2);
+  padding: 5% 7%;
+}
+.sub-title {
+  margin-bottom: 25px;
+}
+
+/* FOOTER
+------------------------------- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.footer-right {
+  font-size: 0.875rem;
+}
+
+/* レスポンシブ・ブレークポイント767px
+------------------------------- */
+@media screen and (max-width: 767px) {
+  .mainVisual {
+    margin: 0;
+  }
+  .mainVisual img {
+    width: 100%;
+    object-fit: cover;
+    height: 50vh; /* 画面の上半分をビューポートの高さの50% */
+  }
+  section {
+    flex-direction: column;
+  }
+  section img {
+    width: 100%;
+    order: 1;
+  }
+  .text {
+    width: 100%;
+    order: 2;
+    padding: 10px 0 0 0;
+  }
+  nav {
+    margin: 5px auto 40px;
+  }
+  .container h3 {
+    font-size: 1.25rem;
+  }
+}
+

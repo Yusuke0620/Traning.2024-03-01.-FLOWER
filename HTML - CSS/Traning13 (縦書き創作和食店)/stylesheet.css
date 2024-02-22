@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/*-------------------------------------------
+共通設定
+-------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    color: #000000;
+    background-color: #E6E2D7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.site-title {
+    display: inline-block;
+    height: 90px;
+}
+.site-title img {
+    height: 90px;
+}
+.site-title a {
+    display: block;
+}
+
+.section-title {
+    font-weight: normal;
+    writing-mode: vertical-rl; /* 縦書きにするための指定 */
+    -webkit-writing-mode: vertical-rl; /* WebKitブラウザ（Safari, Chrome）向け */
+    -ms-writing-mode: vertical-rl; /* Internet Explorer向け */
+}
+.section-title .en {
+    font-size: 0.875rem;
+}
+.section-title .ja {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+/*
+横幅を設定するための共通クラス
+*/
+.inner {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/*
+ベンダープレフィックスを含むwriting-modeプロパティ
+*/
+#mainVisual,
+#news,
+#science-technology,
+#footer {
+    writing-mode: vertical-rl; /* 縦書きにするための指定 */
+    -webkit-writing-mode: vertical-rl; /* WebKitブラウザ（Safari, Chrome）向け */
+    -ms-writing-mode: vertical-rl; /* Internet Explorer向け */
+}
+/*-------------------------------------------
+mainVisual
+-------------------------------------------*/
+#mainVisual {
+    background-image: url("images/mainvisual-pc.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center top;
+    background-size: cover;
+}
+#mainVisual .online-store {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    background-color: #333333;
+    border: 1px solid #fff;
+    padding: 30px 19px;
+    box-shadow: 0 0 0 8px #333333; /* 10pxの余白と同じ背景色を持つ影を追加 */
+}
+#mainVisual .online-store:hover {
+    opacity: 0.8;
+}
+#mainVisual .mainVisual-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+#mainVisual .mainVisual-nav .site-title {
+    line-height: 1px;
+    margin: 0 77px 0 60px;
+}
+#mainVisual .mainVisual-nav ul li {
+    margin-right: 25px;
+}
+#mainVisual .mainVisual-nav ul li:first-child {
+    margin-right: 0;
+}
+
+/*-------------------------------------------
+news
+-------------------------------------------*/
+#news {
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+}
+#news .section-title .ja {
+    display: block;
+    margin: 0;
+}
+#news dl {
+    border-left: 1px solid #000;
+    margin: 80px 95px 0 0;
+}
+#news dl dt {
+    font-size: 0.75rem;
+    border-right: 1px solid #000;
+    padding: 15px 30px 0 0;
+}
+#news dl dd {
+    padding: 15px 5px 15px 30px;
+}
+
+/*-------------------------------------------
+create-new-values
+-------------------------------------------*/
+#create-new-values {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 180px;
+}
+#create-new-values .images-text {
+    position: relative;
+    width: 65%;
+    writing-mode: horizontal-tb; /* 横書きに戻すための指定 */
+    margin: 100px 15px 0 0;
+}
+#create-new-values p {
+    width: 56%;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #f9e90699;
+}
+
+/*-------------------------------------------
+science-technology
+-------------------------------------------*/
+#science-technology {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    margin-top: 180px;
+    width: 100%;
+}
+#science-technology .images-text {
+    position: relative;
+    margin: 100px 0 0 15px;
+    width: 65%;
+    writing-mode: horizontal-tb; /* 横書きに戻すための指定 */
+}
+#science-technology p {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    padding: 52px 0;
+    width: 56%;
+    text-align: center;
+    color: #fff;
+    background-color: #952A2699;
+}
+
+/*-------------------------------------------
+map
+-------------------------------------------*/
+#map iframe {
+    width: 100%;
+    vertical-align: bottom;
+    margin-top: 185px;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    padding: 80px 80px 30px 30px;
+}
+#footer .footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#footer .footer-main p {
+    font-size: 0.875rem;
+    margin-right: 60px;
+}
+#footer .footer-main ul {
+    margin-right: 60px;
+}
+#footer .footer-main ul li {
+    margin-right: 25px;
+}
+#footer .footer-main ul li:first-child {
+    margin-right: 0;
+}
+#footer .contact {
+    font-size: 0.875rem;
+}
+#footer .copy {
+    writing-mode: horizontal-tb; /* 横書きに戻すための指定 */
+    font-size: 0.625rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* レスポンシブ・ブレークポイント768px
+------------------------------- */
+@media screen and (max-width: 768px) {
+    .section-title .ja {
+        font-size: 1.5rem;
+    }
+    .section-title .en {
+        display: none;
+    }
+/*-------------------------------------------
+mainVisual
+-------------------------------------------*/
+#mainVisual {
+    background-image: url("images/mainvisual-sp.jpg");
+    padding: 20px;
+}
+#mainVisual .mainVisual-nav {
+    margin-top: 0;
+}
+#mainVisual .mainVisual-nav .site-title {
+    line-height: 1px;
+    margin: 0 0 0 60px;
+}
+#mainVisual .online-store {
+    bottom: 30px;
+    left: 30px;
+}
+
+/*-------------------------------------------
+news
+-------------------------------------------*/
+#news {
+    margin-top: 80px;
+    justify-content: flex-start;
+}
+#news .section-title .ja {
+    font-size: 1.75rem;
+}
+#news dl {
+    margin: 20px 22px 0 0;
+}
+/*
+4つ目以降を非表示にする
+ */
+ #news dl dt:nth-of-type(n + 4) {
+    display: none;
+}
+#news dl dd:nth-of-type(n + 4) {
+    display: none;
+}
+#news dl dt {
+    padding: 15px 15px 0 0;
+}
+#news dl dd {
+    padding: 15px 5px 15px 15px;
+}
+
+/*-------------------------------------------
+create-new-values
+-------------------------------------------*/
+#create-new-values {
+    margin-top: 90px;
+}
+#create-new-values .images-text {
+    margin: 70px 5px 0 0;
+    width: 90%;
+}
+#create-new-values p {
+    padding: 30px 0;
+    width: 64%;
+}
+
+/*-------------------------------------------
+science-technology
+-------------------------------------------*/
+#science-technology {
+    margin-top: 100px;
+}
+#science-technology .images-text {
+    margin: 70px 0 0 5px;
+    width: 90%;
+}
+#science-technology p {
+    padding: 30px 0;
+    width: 64%;
+}
+
+/*-------------------------------------------
+map
+-------------------------------------------*/
+#map iframe {
+    margin-top: 100px;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    padding: 40px 20px 30px 20px;
+}
+#footer .footer-main p {
+    margin-right: 30px;
+}
+#footer .footer-main ul {
+    margin-right: 30px;
+}
+#footer .footer-main ul li:nth-of-type(n + 2) {
+    margin-right: 10px;
+}
+
+}

@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: #333333;
+    max-width: 1000px;
+    margin: 0 auto;
+    cursor: default;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+/*
+横幅を設定するための共通クラス
+*/
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* /ここまで共通設定 */
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    border-bottom: 1px solid #C3C3C3;
+    margin: 45px 0 0 0;
+    padding: 0 15px 30px;
+}
+#header .header-logo {
+    width: 110px;
+    line-height: 1px;
+    margin: 0 auto 40px;
+}
+#header .header-logo a {
+    display: block;
+}
+#header nav {
+    display: flex;
+    justify-content: space-between;
+}
+#header nav ul {
+    display: flex;
+}
+#header .ul-left li {
+    margin-right: 15px;
+}
+#header .ul-right li {
+    margin-left: 15px;
+}
+
+/*-------------------------------------------
+contents
+-------------------------------------------*/
+#contents {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin-bottom: 110px;
+}
+
+/*-------------------------------------------
+image
+-------------------------------------------*/
+#image {
+    width: 60%;
+}
+
+/*-------------------------------------------
+info
+-------------------------------------------*/
+#info {
+    width: 50%;
+    margin-left: 60px;
+}
+#info .info-title {
+    font-size: 1rem;
+    font-weight: bold;
+    border-top: 1px solid #C3C3C3;
+    border-bottom: 1px solid #C3C3C3;
+    padding: 20px 0;
+}
+#info .text p {
+    padding: 22px 0;
+    line-height: 1.9;
+}
+#info .tax {
+    margin: 15px 0;
+}
+#info .cart {
+    padding: 20px 0 30px;
+}
+#info .cart table {
+    margin-bottom: 20px;
+}
+#info .cart select {
+    border: 1px solid #C3C3C3;
+    width: 100%;
+    padding-left: 15px;
+    -webkit-appearance: menulist; /* Chrome、Safari、Opera */
+    -moz-appearance: menulist;    /* Firefox */
+    appearance: menulist;         /* 標準の指定 */
+}
+#info .cart select option {
+    text-align: left;
+}
+/* ボタン */
+#info .button {
+    color: #fff;
+    background-color: #4B4B4B;
+    display: block;
+    text-align: center;
+    padding: 18px;
+}
+/* table */
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+table th,
+table td {
+    padding: 10px;
+    font-weight: normal;
+}
+#info .color,
+#info .size {
+    width: 20%;
+}
+#info .quantity {
+    width: 60%;
+}
+/* 縦線のボーダースタイル */
+#info table th,
+#info table td {
+    border-right: 1px solid #C3C3C3;
+}
+#info .cart  table th:last-child,
+#info .cart  table td:last-child {
+    border-right: none;
+}
+/* 横線のボーダースタイル */
+#info table tr,
+#info table th {
+    border-bottom: 1px solid #C3C3C3;
+}
+#info table tr:last-child {
+    border-bottom: none;
+}
+/* bodysize */
+#info .bodysize th {
+    background-color: #ECEBEB;
+    border-top: 1px solid #C3C3C3;
+    border-left: 1px solid #C3C3C3;
+}
+#info .bodysize td {
+    border-left: 1px solid #C3C3C3;
+    border-bottom: 1px solid #C3C3C3;
+}
+#info .bodysize td:first-child {
+    background-color: #ECEBEB;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    margin: 10px 0;
+    font-size: 0.625rem;
+}
+#footer p {
+    text-align: center;
+}
+
+/* レスポンシブ・ブレークポイント896px
+------------------------------- */
+@media screen and (max-width: 896px) {
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    border-bottom: none;
+    padding: 0 15px 15px;
+}
+#header .header-logo {
+    margin: 0 auto 25px;
+}
+nav {
+    overflow-x: scroll;
+}
+
+/*-------------------------------------------
+contents
+-------------------------------------------*/
+#contents {
+    padding: 0;
+    flex-direction: column;
+}
+
+/*-------------------------------------------
+image
+-------------------------------------------*/
+#image {
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+/*-------------------------------------------
+info
+-------------------------------------------*/
+#info {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
+}
+}

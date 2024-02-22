@@ -1,0 +1,133 @@
+@charset "UTF-8"; 
+
+* { 
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+/* /ここまで共通設定 */
+
+body {
+    font-family: Meiryo, Regular;
+    background-color: #F4F9FF;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px  auto 0;
+    padding: 0 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* ヘッダー
+------------------------------- */
+.header-logo {
+    width: 160px;
+}
+
+/* MAIN
+------------------------------- */
+.sub-container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+main h2 {
+    font-size: 1.125rem;
+}
+section {
+    margin-top: 60px;
+}
+
+/* index */
+.index {
+    background-color: #fff;
+    padding: 30px 0 20px;
+}
+ol li {
+    margin: 0 0 20px 20px;
+}
+
+/* detail */
+.item-contents {
+    display: flex;
+    justify-content: space-between;
+}
+.item-img img {
+    width: 270px;
+}
+.item-profile {
+    text-align: left;
+    width: 270px;
+}
+.item-content-title,
+.item-content-info {
+    border-bottom: 1px solid #DEDEDE;
+}
+.item-content-title {
+    padding-bottom: 20px;
+}
+.item-content-info,
+.item-content-text {
+    padding: 20px 0;
+}
+dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+dt {
+    width: 24%;
+}
+dd {
+    width: 76%;
+}
+.item-profile a {
+    color: #333;
+}
+.item-profile a:hover {
+    opacity: 0.7;
+}
+
+/* フッター
+------------------------------- */
+#footer {
+    margin: 110px 0 15px;
+}
+footer p {
+    font-size: 0.625rem;
+}
+
+/* レスポンシブ・ブレークポイント1024px
+------------------------------- */
+@media (max-width: 1024px) {
+    .sub-container {
+        padding: 0 30px;
+    }
+    .item-contents {
+        flex-direction: column;
+    }
+    .item-content-title {
+        font-size: 1.125rem;
+        margin-top: 20px;
+    }
+    .item-img img {
+        width: 100%;
+    }
+    .item-profile {
+        width: 100%;
+    }
+
+
+
+
+}    

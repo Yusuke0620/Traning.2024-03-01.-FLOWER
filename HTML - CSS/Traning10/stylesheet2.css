@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 0.875rem;
+  color: #2a2a2a;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+/*
+ボタン
+*/
+.button {
+    display: inline-block;
+    font-size: 0.75rem;
+    border: 1px solid #000;
+    padding: 15px 36px
+}
+.button:hover {
+    opacity: 0.7;
+}
+/*
+横幅を設定するための共通クラス
+*/
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+/* /ここまで共通設定 */
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    background-color: pink;
+    background-image: url("images/mainvisual.jpg");
+    background-position: center top;
+    background-size: cover;
+    min-height: 100vh;
+    margin-bottom: 80px;
+    position: relative;
+}
+#header .site-logo {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 30px;
+}
+
+/*-------------------------------------------
+magazine
+-------------------------------------------*/
+#magazine {
+    margin-bottom: 80px;
+}
+#magazine .textarea {
+    text-align: center;
+}
+#magazine .textarea p {
+    margin-bottom: 40px;
+}
+#magazine .items {
+    display: flex;
+    justify-content: space-between;
+}
+#magazine .item {
+    width: 49%;
+    position: relative;
+}
+#magazine .item .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 290px;
+    padding: 15px 20px;
+}
+#magazine .item .text h3 {
+    font-size: 1.25rem;
+}
+#magazine .item .text p {
+    font-weight: bold;
+}
+#magazine .item:hover  {
+    opacity: 0.7;
+}
+
+/*-------------------------------------------
+fashion
+-------------------------------------------*/
+#fashion {
+    background-color: tan;
+    background-image: url("images/fashion.jpg");
+    background-position: center top;
+    background-size: cover;
+    height: 520px;
+    margin-bottom: 80px;
+}
+#fashion .textarea {
+    text-align: center;
+    padding-top: 60px;
+}
+#fashion .textarea p {
+    margin-bottom: 30px;
+}
+
+/*-------------------------------------------
+catalog
+-------------------------------------------*/
+#catalog {
+    background-color: #F5F5F5;
+    padding: 60px 0
+}
+#catalog .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#catalog img {
+    width: 48%;
+}
+#catalog .textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-evenly;
+    width: 48%;
+}
+#catalog .textarea h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*-------------------------------------------
+antique
+-------------------------------------------*/
+#antique {
+    background-color: #F5F5F5;
+    padding: 60px 0;
+}
+#antique .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+#antique img {
+    width: 48%;
+}
+#antique .textarea {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+#antique .textarea h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 90px 0 40px;
+}
+#antique .textarea p {
+    margin-bottom: 30px;
+}
+
+#antique .button {
+    text-align: center;
+    margin: 30px auto 0;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    background-color: #333333;
+    color: #fff;
+    font-size: 0.75rem;
+}
+#footer .copyright {
+    background-color: #fff;
+    color: #2a2a2a;
+    padding: 30px 0;
+    text-align: center;
+}
+#footer .info {
+    display: flex;
+    padding: 100px 0 105px;
+}
+#footer .info .text,
+#footer .info .text2 {
+    width: calc(100% / 3);
+    line-height: 2;
+}
+#footer .info .text ul li::before {
+    content: "-";
+    margin-right: 5px;
+}
+#footer .info .text h4,
+#footer .info .text2 h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+#footer .info .site-logo {
+    display: block;
+    margin: 65px 0;
+    width: calc(100% / 3);
+    line-height: 1px;
+}
+#footer .info .site-logo:hover {
+    opacity: 0.7;
+}
+
+/* レスポンシブ・ブレークポイント896px
+------------------------------- */
+@media screen and (max-width: 896px) {
+
+/*-------------------------------------------
+magazine
+-------------------------------------------*/
+#magazine .items {
+    flex-direction: column;
+}
+#magazine .item {
+    width: 100%;
+    margin-bottom: 33px;
+}
+#magazine .item:last-child {
+    margin-bottom: 0;
+}
+
+/*-------------------------------------------
+fashion
+-------------------------------------------*/
+#fashion {
+    margin-bottom: 50px;
+}
+#fashion .textarea {
+    padding-top: 35px;
+}
+
+/*-------------------------------------------
+catalog
+-------------------------------------------*/
+#catalog {
+    padding: 30px 0  0;
+}
+#catalog .wrapper {
+    flex-direction: column;
+}
+#catalog img {
+    width: 100%;
+    margin-bottom: 65px;
+}
+#catalog .textarea {
+    width: 100%;
+}
+#catalog .textarea p {
+    margin-bottom: 30px;
+}
+#catalog .textarea h3 {
+    margin-bottom: 40px;
+}
+
+/*-------------------------------------------
+antique
+-------------------------------------------*/
+#antique {
+    padding: 30px 0;
+}
+#antique .wrapper {
+    flex-direction: column-reverse;
+}
+#antique img {
+    width: 100%;
+}
+#antique .textarea {
+    width: 100%;
+}
+#antique .textarea p {
+    margin-bottom: 30px;
+}
+#antique .textarea h3 {
+    margin: 0 0 40px 0;
+}
+#antique .button {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer .info {
+    display: inline;
+    padding: 0;
+    height: 370px;
+}
+#footer .info .site-logo {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 40px 0;
+}
+#footer .info .text {
+    width: 100%;
+    margin-bottom: 40px;
+}
+#footer .info .text2 {
+    width: 100%;
+    margin-bottom: 70px;
+
+}
+#footer .info .text h4,
+#footer .info .text2 h4 {
+    margin-bottom: 10px;
+}
+}

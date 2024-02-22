@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Meiryo";
+  font-size: 0.875rem;
+  color: #24292e;
+  cursor: default;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #24292e;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 75px;
+}
+/*
+横幅を設定するための共通クラス
+*/
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 116px 0;
+}
+#header .header-logo {
+    line-height: 1px;
+}
+#header .header-logo a {
+    display: block;
+}
+#header nav ul {
+    display: flex;
+}
+#header nav ul li {
+    margin-left: 30px;
+}
+#header nav ul li:first-child {
+    margin-left: 0;
+}
+#header nav ul li:hover {
+    opacity: 0.7;
+}
+#header .instagram {
+    display: inline-block;
+    width: 20px;
+}
+
+/*-------------------------------------------
+mainvisual
+-------------------------------------------*/
+#mainvisual .responsive-image {
+    display: none;
+}
+#mainvisual img {
+    height: 420px;
+    background-position: center;
+    object-fit: cover;
+    margin-bottom: 85px;
+}
+
+/*-------------------------------------------
+about
+-------------------------------------------*/
+#about {
+    margin-bottom: 130px;
+}
+#about .contents p {
+    margin-bottom: 35px;
+}
+#about .contents p:last-child {
+    margin-bottom: 0;
+}
+
+/*-------------------------------------------
+works
+-------------------------------------------*/
+#works {
+    margin-bottom: 160px;
+}
+#works .contents {
+    display: flex;
+    flex-wrap: wrap;
+}
+#works .contents .items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+#works .contents .items:last-child {
+    margin-bottom: 0;
+}
+#works .contents .items .item {
+    width: 31%;
+}
+
+/*-------------------------------------------
+news
+-------------------------------------------*/
+#news {
+    margin-bottom: 135px;
+}
+#news dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #C8C8C8;
+}
+#news dl dt {
+    width: 20%;
+    border-bottom: 1px solid #C8C8C8;
+    padding: 15px 16px;
+}
+#news dl dd {
+    width: 80%;
+    border-bottom: 1px solid #C8C8C8;
+    padding: 15px 16px;
+}
+
+/*-------------------------------------------
+contact
+-------------------------------------------*/
+#contact {
+    margin-bottom: 130px;
+}
+#contact .section-title {
+    margin-bottom: 62px;
+}
+#contact dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+#contact dt {
+    width: 15%;
+}
+#contact dd {
+    width: 85%;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    border: 1px solid #C8C8C8;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#contact textarea {
+    height: 160px;
+    margin-bottom: 0;
+}
+#contact .button {
+    text-align: center;
+    margin-top: 30px;
+}
+#contact .button input {
+    color: #fff;
+    background-color: #24292E;
+    padding: 18px 85px;
+    border: 1px solid #24292E;
+}
+#contact .button input:hover {
+    color: #000;
+    background-color: #ffffff;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    color: #fff;
+    background-color: #24292E;
+    font-size: 0.5rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* レスポンシブ・ブレークポイント600px
+------------------------------- */
+@media screen and (max-width: 600px) {
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    /*-------------------------------------------
+    header
+    -------------------------------------------*/
+    #header {
+        font-size: 0.8125rem;
+        margin: 25px 0 15px;
+        flex-direction: column;
+    }
+    #header .header-logo {
+        margin-bottom: 10px;
+    }
+    #header nav ul li {
+        margin-left: 20px;
+    }
+    #header nav ul li:first-child {
+        margin-left: 0;
+    }
+
+    /*-------------------------------------------
+    mainvisual
+    -------------------------------------------*/
+    #mainvisual img {
+        display: none;
+    }
+    #mainvisual .responsive-image {
+        display: block;
+        width: 100%;
+    }
+
+    /*-------------------------------------------
+    about
+    -------------------------------------------*/
+    #about {
+        margin-bottom: 70px;
+    }
+
+    /*-------------------------------------------
+    work
+    -------------------------------------------*/
+    #works {
+        margin-bottom: 70px;
+    }
+    #works .contents {
+    }
+    #works .contents .items {
+        flex-direction: column;
+    }
+    #works .contents .items .item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /*-------------------------------------------
+    news
+    -------------------------------------------*/
+    #news {
+        margin-bottom: 70px;
+    }
+    #news dl {
+        flex-direction: column;
+    }
+    #news dl dt {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    #news dl dd {
+        width: 100%;
+        border-bottom: 1px solid #C8C8C8;
+        padding-top: 0;
+    }
+
+    /*-------------------------------------------
+    contact
+    -------------------------------------------*/
+    #contact {
+        margin-bottom: 70px;
+    }
+    #contact .section-title {
+        margin-bottom: 40px;
+    }
+    #contact dt {
+        width: 100%;
+    }
+    #contact dd {
+        width: 100%;
+    }
+}

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+  color: #2b2a27;
+}
+
+a {
+  color: #2b2a27;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/*-------------------------------------------
+mainContenta
+-------------------------------------------*/
+#maincontents {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+/*-------------------------------------------
+mainvisual
+-------------------------------------------*/
+#mainvisual {
+    width: 50%;
+}
+#mainvisual img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center top;
+}
+
+/*-------------------------------------------
+recipe
+-------------------------------------------*/
+#recipe {
+    width: 50%;
+    padding: 40px 5% 0;
+}
+#recipe .recipe-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+}
+#recipe p {
+    margin-bottom: 45px;
+}
+#recipe .text {
+    margin-bottom: 40px;
+}
+#recipe .text:last-child {
+    margin-bottom: 0;
+}
+#recipe .text h3 {
+    font-size: 1.25rem;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+#recipe .text dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+#recipe .text dl dt {
+    width: 85%;
+    border-bottom: 1px dotted #CCCCCC;
+    padding: 5px 0
+}
+#recipe .text dl dd {
+    width: 15%;
+    text-align: right;
+    border-bottom: 1px dotted #CCCCCC;
+    padding: 5px 0
+}
+#recipe .text dl dt:first-child {
+    padding-top: 0;
+}
+#recipe .text ol li {
+    border-bottom: 1px dotted #CCCCCC;
+    padding: 6px 0;
+    margin-left: 20px;
+}
+#recipe .text ol li:first-child {
+    padding-top: 0;
+}
+
+/*-------------------------------------------
+button
+-------------------------------------------*/
+.button {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.button a {
+    display: inline-block;
+    padding: 18px 60px;
+    border: 1px solid #000;
+    text-decoration: none;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    font-size: 0.75rem;
+    text-align: center;
+}
+#footer .sns {
+    display: flex;
+    justify-content: center;
+}
+#footer .sns li {
+    list-style: none;
+    margin: 0 10px;
+}
+#footer .sns li:first-child{
+    margin-left: 0;
+}
+#footer .sns li:last-child{
+    margin-right: 0;
+}
+#footer .copyright {
+    margin: 20px 0;
+}
+
+/* レスポンシブ・ブレークポイント834px
+------------------------------- */
+@media screen and (max-width: 834px) {
+    #maincontents {
+        flex-direction: column;
+    }
+    #mainvisual {
+        width: 100%;
+    }
+    #mainvisual img {
+        height: auto;
+    }
+
+    #recipe {
+        width: 100%;
+    }
+    #recipe .recipe-title {
+        margin-bottom: 20px;
+    }
+    #recipe p {
+        margin-bottom: 40px;
+    }
+}

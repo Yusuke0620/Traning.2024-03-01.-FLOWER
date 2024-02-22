@@ -1,0 +1,424 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
+body{
+  font-family: "Meiryo";
+  font-size: 0.875rem;
+  color: #000;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+img { max-width: 100%; }
+
+.container {
+    background-color: #F0F0F0;
+}
+
+.wrapper {
+    max-width: 1032px;
+    margin: 120px auto;
+    padding: 0 15px;
+    background-color: #F0F0F0;
+}
+/* /ここまで共通設定 */
+
+
+/* HEADER
+------------------------------- */
+.header-wrapper {
+    width: 100%;
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    line-height: 1px;
+    margin-right: 60px;
+}
+
+.logo a {
+    display: block;
+}
+
+.h-menu {
+    display: flex;
+}
+
+.h-menu a {
+    margin-right: 30px;
+    color: #000;
+}
+
+.header-right a {
+    width: 200px;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* mainVisual
+------------------------------- */
+#mainVisual {
+    background-image: url("images/mainvisual.jpg");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    object-fit: cover;
+}
+
+
+/* MAIN
+------------------------------- */
+.title {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: normal;
+    letter-spacing: 10px;
+}
+
+.title span {
+    position: relative; /* タイトル下の横ライン疑似要素 */
+}
+.title span::before {
+    position: absolute;
+    content: "";
+    top: 42px;
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+}
+
+/* NEWS */
+time {
+    margin-right: 15px;
+}
+
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item span {
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: #000;
+    padding: 2px 7px;
+}
+
+.news-item p {
+    margin-top: 15px;
+}
+
+.news-item {
+    max-width: 100%;
+    border-left: 1px solid #000;
+    padding: 15px 0 15px 20px;
+}
+
+.news-item:first-child {
+    border-left: none; /* 一番左のborderを削除 */
+    padding-left: 0; /* 一番左のpaddingを削除 */
+}
+
+/* ABOUT */
+.ABOUT img {
+    width: 57%; /* 画像の横幅 */
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.ABOUT {
+    display: flex;
+    max-height: 500px;
+}
+
+.ABOUT .wrapper {
+    margin: 0;
+    padding: 170px 5% 65px;
+}
+
+.ABOUT p {
+    line-height: 30px;
+}
+
+
+/* BUSINESS */
+.BUSINESS {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 120px 15px 0;
+    background-color: #F0F0F0;
+}
+.business-contents {
+    display: flex;
+    align-items: center;
+}
+
+.business-contents-sub1 {
+    padding-left: 100px;
+}
+
+.business-contents-sub2 {
+    margin-bottom: 200px;
+    padding: 0 100px 0 65px;
+}
+
+.business-item {
+    margin-bottom: 45px;
+}
+
+.business-item img {
+    vertical-align: bottom;
+}
+
+.business-item h3 {
+    position: relative;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding-left: 20px;
+}
+.business-item h3::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #000;
+}
+
+
+/* COMPANY */
+.COMPANY {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 0 15px 140px;
+    background-color: #F0F0F0;
+}
+.company-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.company-image img {
+    position: absolute;
+    top: 50%;
+    right: -4%;
+    transform: translateY(-50%);
+    height: 400px;
+    width: 55%;
+    object-fit: cover;
+}
+
+.company-contents {
+    background-color: #fff;
+    width: 58%;
+    padding: 100px 60px 79px;
+}
+
+dt {
+    float: left;
+    line-height: 31px;
+}
+
+dd {
+    margin-left: 90px;
+    line-height: 31px;
+}
+
+
+/* FOOTER
+------------------------------- */
+.footer-wrapper {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding:  45px 15px 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main h1 {
+    margin-top: 30px;
+}
+
+.company-wrapper {
+    margin-bottom: 0;
+}
+
+.footer-main {
+    padding-top: 0;
+}
+
+.copy {
+    font-size: 0.625rem;
+    margin: 45px 0 20px;
+}
+
+
+/* レスポンシブ・ブレークポイント900px
+------------------------------- */
+@media screen and (max-width: 900px) {
+    .header-right a {
+        display: none;
+    }
+
+    .logo {
+        width: 80px;
+        margin-top: 15px;
+    }
+
+    .header-left {
+        display: block;
+    }
+
+    .h-menu {
+        margin: 10px 0 13px;
+    }
+
+    .wrapper {
+        margin: 70px auto;
+    }
+
+    /* NEWS */
+    .NEWS {
+        height: 550px;
+    }
+
+    .news-contents {
+        flex-direction: column;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .news-item {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    /* ABOUT */
+    .ABOUT {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ABOUT img {
+        width: 100%;
+        object-fit: cover; 
+      }
+
+    .ABOUT .wrapper {
+        padding: 25px 15px 0;
+        margin-bottom: 200px;
+    } 
+
+    /* BUSINESS */
+    .BUSINESS {
+        padding-top: 0;
+    }
+
+    .business-contents {
+        flex-direction: column;
+    }
+
+    .business-contents-sub1,
+    .business-contents-sub2 {
+        padding: 0;
+    }
+
+    .business-contents-sub2 {
+        margin-bottom: 50px;
+    }
+
+
+    .business-item {
+        margin-bottom: 30px;
+    }
+
+    .business-item img {
+        width: 100%;
+    }
+
+    .title {
+        margin-bottom: 55px;
+    }
+
+    /* COMPANY */
+    .COMPANY {
+        padding-bottom: 0;
+    }
+
+    .company-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: initial;
+        line-height: 1px;
+    }
+
+    .company-contents {
+        width: 100%;
+        padding: 30px 15px;
+        margin-bottom: 20px;
+    }
+
+    .company-image img {
+        position: initial;
+        width: 100%;
+        transform: none;
+    }
+
+    dt {
+        float: none;
+        line-height: 20px;
+        margin: 22px 10px 5px 0;
+
+    }
+
+    dd {
+        line-height: 20px;
+        margin: 0 15px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+
+    .footer-main h1 {
+        margin-top: 0;
+    }
+}

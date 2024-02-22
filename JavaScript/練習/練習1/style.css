@@ -1,0 +1,9 @@
+.text {
+    border: 1px solid #000;
+    margin-left: 10px;
+}
+
+.color {
+    color: red;
+    background-color: gray;
+}

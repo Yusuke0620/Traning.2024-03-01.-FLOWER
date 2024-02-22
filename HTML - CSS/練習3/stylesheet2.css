@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Meiryo";
+  font-size: 0.875rem;
+  color: #333;
+  background-color: #F4F9FF;
+  cursor: default;
+}
+
+a {
+    color: #333;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+/*
+横幅を設定するための共通クラス
+*/
+.container {
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.inner-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* /ここまで共通設定 */
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header .site-logo {
+    width: 160px;
+    line-height: 1px;
+    margin-bottom: 15px;
+}
+#header .site-logo a {
+    display: block;
+}
+
+/*-------------------------------------------
+mainvisual
+-------------------------------------------*/
+#mainvisual {
+    width: 100%;
+    margin-bottom: 65px;
+}
+
+/*-------------------------------------------
+index
+-------------------------------------------*/
+#index {
+    margin-bottom: 65px;
+    background-color: #fff;
+    padding: 30px 0;
+}
+#index ol {
+    list-style-type: decimal; /* 通常の数字でのリスト表示 */
+    margin-left: 20px; /* リストのインデントを調整 */
+}
+#index ol li {
+    margin-bottom: 20px;
+}
+#index ol li:last-child {
+    margin-bottom: 0;
+}
+
+/*-------------------------------------------
+detail
+-------------------------------------------*/
+#detail {
+    max-width: 600px;
+    margin: 0 auto 100px;
+}
+#detail .content {
+    display: flex;
+    justify-content: space-between;
+}
+#detail .content img {
+    width: 45%;
+}
+#detail .content .text {
+    width: 45%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#detail .content .text .text-title {
+    font-size: 1.125rem;
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 20px;
+}
+#detail dl {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 0 0 15px 0;
+}
+#detail dl dt {
+    width: 25%;
+}
+#detail dl dd {
+    width: 75%;
+}
+#detail .content .text a:hover {
+    opacity: 0.7;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    font-size: 0.625rem;
+    margin: 15px auto;
+}
+
+/* レスポンシブ・ブレークポイント1024px
+------------------------------- */
+@media screen and (max-width: 1024px) {
+    .inner-wrapper {
+        padding: 0 40px;
+    }
+
+    #header, #mainvisual {
+        padding: 0 10px;
+    }
+
+    #detail .content {
+        flex-direction: column;
+    }
+
+    #detail .content img {
+        width: 100%;
+    }
+
+    #detail .content .text {
+        width: 100%;
+    }
+
+    #detail .content .text .text-title {
+        padding-top: 20px;
+    }
+
+    #detail dl {
+        padding: 15px 0;
+    }
+
+    #detail .content .text p {
+        padding: 25px 0;
+    }
+}
+
+

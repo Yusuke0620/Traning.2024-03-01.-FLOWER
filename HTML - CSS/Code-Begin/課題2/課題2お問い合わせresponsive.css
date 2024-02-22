@@ -1,0 +1,158 @@
+/*「float」「position」一括全解除 */
+* {
+  float: none;
+  position: static;
+  }
+
+  img {
+  /*最大幅を100％にして崩れを防ぐ */
+  max-width: 100%;
+  /*高さ指定autoで、画像自体の比率が変わって崩れるのも防ぐ */
+  height: auto;
+}
+
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+
+  /* navバーとasideバーを非表示にする */
+  nav,aside {
+    display: none; 
+  }
+
+  .header-logo {
+    width: 200px;
+  }
+
+  main {
+    padding: 0 3%;
+    margin-bottom: 15px;
+  }
+
+  /* asideを下に移動させる */
+  .contents {
+    width: 100%; 
+  }
+
+  /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+  /* ハンバーガーアイコンの設置スペース */
+
+  /* 外枠 */
+  .drawer_open {
+    border: 1px solid black;
+  }
+
+  /* 三本線展開 */
+  .drawer_open span,
+  .drawer_open span::before,
+  .drawer_open span::after {
+    display: block;  
+  }
+
+  /* ハンバーガーメニューナビ展開時 */
+  #drawer_input:checked ~ .nav-responsive {
+    opacity: 1;
+    visibility: visible; /* 表示 */    
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+  /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+  /* 青色のh2タグ */
+  h2 {  
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 21px;
+  }
+
+  /* h2の縦ライン疑似要素 */
+  h2::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: 5px;
+    bottom: 5px;
+    left: 10px;
+    width: 3px;
+    background-color: #889EF0;
+  }
+
+  .section1-p {
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 20px 0 65px;
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+  }
+
+  section p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+    padding: 0 10px;    
+    color: #666666;    
+  }
+
+
+  /* table */
+  table {
+    font-size: 12px;
+    border-collapse: collapse;
+  }
+
+  th {
+    width: 111px; 
+  }
+
+  th, td {
+    padding: 5px; /* 上下のpaddingを5px、左右のpaddingを10pxに調整 */      
+  }
+
+  table input {
+    width: 97%;
+  }
+
+  table textarea {
+    width: 96.2%;
+  }
+
+
+
+
+
+
+
+
+
+  /* asideなし */
+  /* button非表示 */
+  .scrollTopBtn a{  
+    display: none;  
+  }
+
+
+  /* footer */
+  footer {
+    font-size: 10px;
+    padding: 13px 0 11px 0;
+    line-height: 14px;
+  }
+
+  .footer-Template-Party {
+    font-size: 10px;
+    margin: 0;
+  }
+}
+
+
+/* タブレット対応 */
+@media (max-width: 1000px) {
+  aside {
+    width: 100%;
+    clear: left;
+  } 
+}

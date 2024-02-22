@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    color: #2d2d2d;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.site-title {
+    width: 110px;
+    line-height: 1px;
+    margin-right: 50px;
+}
+
+.site-title a {
+    display: block;
+}
+
+section {
+    padding: 30px 0;
+}
+
+.section-title {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+/*
+内側の横幅を設定するための共通クラス
+*/
+.inner {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+/* /ここまで共通設定 */
+/*-------------------------------------------
+mainvisual
+-------------------------------------------*/
+#mainvisual {
+    width: 90vw;
+    margin: 4% auto 30px;
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    width: 90vw;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+}
+#header nav ul {
+    display: flex;
+}
+#header nav ul li {
+    margin-right: 30px;
+    font-size: 0.875rem;;
+}
+#header nav ul li:last-child {
+    margin-right: 0;
+}
+
+/*-------------------------------------------
+concept
+-------------------------------------------*/
+#concept {
+    display: flex;
+    align-items: center;
+}
+#concept img {
+    width: 50%;
+}
+#concept .textarea {
+    width: 50%;
+    padding: 0 7%;
+}
+#concept .textarea p {
+    margin-top: 25px;
+}
+
+/*-------------------------------------------
+work
+-------------------------------------------*/
+#work {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#work img {
+    width: 50%;
+}
+#work .textarea {
+    width: 50%;
+    padding: 0 7%;
+}
+#work .textarea p {
+    margin-top: 25px;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 48px 0 18px;
+}
+#footer .copyright {
+    font-size: 0.875rem;
+}
+#footer .site-title {
+    margin-right: 0;
+}
+
+/* レスポンシブ・ブレークポイント767px
+------------------------------- */
+@media screen and (max-width:767px ) {
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    #mainvisual {
+        width: 100%;
+        margin-top: 0;
+    }
+    #mainvisual img {
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    #header {
+        padding: 0 18px;
+        margin: 0 0 30px;
+        width: 100%;
+    }
+
+    #concept {
+        flex-direction: column;
+    }
+    #concept img {
+        width: 100%;
+        margin-bottom: 7px;
+    }
+    #concept .textarea {
+        width: 100%;
+        padding: 0;
+    }
+
+    #work {
+        flex-direction: column;
+    }
+    #work img {
+        width: 100%;
+        margin-bottom: 7px;
+    }
+    #work .textarea {
+        width: 100%;
+        padding: 0 ;
+    }
+
+    #footer {
+        margin-top: 55px;
+    }
+}

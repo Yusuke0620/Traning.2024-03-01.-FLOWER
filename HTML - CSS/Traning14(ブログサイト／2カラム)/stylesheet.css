@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    color: #333333;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+/*
+横幅を設定するための共通クラス
+*/
+#container {
+  max-width: 1200px;
+  margin: 70px auto 0;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
+#container a {
+  color: #333;
+}
+/*
+要素の内側の横幅を設定するための共通クラス
+*/
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/*
+READ MOREのホバー時に消える下線消失アニメーション
+*/
+.readMore {
+  display: inline-block;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 0.875rem;
+  position: relative;
+}
+.readMore::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  bottom: -1px;
+  left: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
+}
+.readMore:hover::after {
+  transform: translateY(3px);
+  opacity: 0;
+}
+/* /ここまで共通設定 */
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+#header .header-logo {
+  line-height: 1px;
+  padding: 20px 0;
+  height: 70px;
+}
+#header .header-logo a {
+  display: inline-block;
+  width: 145px;
+}
+
+/*-------------------------------------------
+nav
+-------------------------------------------*/
+#nav {
+  position: fixed;
+  top: 70px; /* headerの高さに合わせて調整 */
+  width: 100%;
+  background-color: #333333;
+  z-index: 1000;
+}
+#nav ul {
+  display: flex;
+}
+#nav ul li a {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-right: 60px;
+  color: #fff;
+  margin: 10px 60px 10px 0;
+}
+
+/*-------------------------------------------
+pickup
+-------------------------------------------*/
+#pickup .inner{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px; /* headerとnavの高さの合計+少し余裕を持たせた値に調整 */
+}
+#pickup .pickupArticle {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+#pickup .pickup-title {
+  font-size: 1rem;
+  margin: 16px 0;
+}
+
+/*-------------------------------------------
+main
+-------------------------------------------*/
+main {
+  width: 65%;
+}
+main ul {
+  display: flex;
+  font-size: 0.875rem;
+  margin: 13px 0;
+}
+main ul .date {
+  margin-right: 20px;
+}
+main .mainArticle {
+  margin-top: 80px;
+}
+main .mainArticle:first-child {
+  margin-top: 0;
+}
+main .mainArticle p {
+  padding: 15px 40px 25px;
+}
+main .readMore {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*-------------------------------------------
+aside
+-------------------------------------------*/
+aside {
+  width: 29%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+}
+aside .aside-title {
+  font-size: 1.125rem;
+  text-align: center;
+  padding: 40px 0 30px 0
+}
+aside #profile .profileImage {
+  width: 130px;
+  margin: 10px auto 0; /* 画像を垂直方向にも中央揃え */
+}
+aside #profile .profileImage img{
+  height: 130px;
+  border-radius: 50%;
+}
+aside #profile p {
+  margin-bottom: 20px;
+}
+aside p {
+  font-size: 0.875rem;
+}
+aside #ranking p {
+  margin: 5px 0 30px;
+}
+aside #archive ul {
+  border-top: 1px solid #777777;
+}
+aside #archive ul li {
+  border-bottom: 1px solid #777777;
+  padding: 20px;
+  font-size: 0.875rem;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  background-color: #F7F7F7;
+  margin-top: 140px;
+  font-size: 0.875rem;
+}
+#footer a {
+  color: #333;
+}
+#footer section {
+  width: 30%;
+}
+#footer .footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 0;
+}
+#footer .footer-title {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+}
+#footer .f-about p {
+  margin-bottom: 20px;
+}
+#footer .f-about li {
+  margin-bottom: 5px;
+}
+#footer .f-menu ul {
+  border-top: 1px solid #777777;
+}
+#footer .f-menu ul li {
+  border-bottom: 1px solid #777777;
+  padding: 15px;
+}
+#footer .copy {
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 10px 0;
+}
+
+/* レスポンシブ・ブレークポイント767px
+------------------------------- */
+@media screen and (max-width: 767px) {
+
+/*
+横幅を設定するための共通クラス
+*/
+#container {
+  flex-direction: column;
+  margin: 100px auto 0;
+  padding: 0 16px;
+  justify-content: space-between;
+}
+/*
+グルーバルナビゲーション
+*/
+#nav {
+  overflow-x: scroll;
+}
+
+/*-------------------------------------------
+pickup
+-------------------------------------------*/
+#pickup .inner{
+  flex-direction: column;
+  margin-top: 140px;
+}
+#pickup .pickupArticle {
+  width: 100%;
+  margin-top: 30px;
+}
+#pickup .pickupArticle:first-child {
+  margin-top: 0;
+}
+
+/*-------------------------------------------
+main
+-------------------------------------------*/
+main {
+  width: 100%;
+}
+
+/*-------------------------------------------
+aside
+-------------------------------------------*/
+aside {
+  width: 100%;
+  margin-right: 0;
+  margin: 70px 0 0 0;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer section {
+  width: 100%;
+  margin-top: 30px;
+}
+#footer .footer-info {
+  flex-direction: column;
+  padding: 55px 0 80px;
+}
+}

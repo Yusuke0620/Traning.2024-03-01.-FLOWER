@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body{
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  color: #2a2a2a;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+
+/* /ここまで共通設定 */
+
+/* #MainVisual
+------------------------------- */
+#mainVisual {
+    background-image: url(images/mainvisual.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    padding: 30px;
+}
+#mainVisual h1 {
+    text-align: right;
+}
+
+/* MAIN
+------------------------------- */
+section {
+    text-align: center;
+    margin-top: 80px;
+}
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+section p {
+    font-size: 0.85rem;
+    margin-bottom: 40px;
+}
+.section-text {
+    padding: 0 5%;
+    margin: 0 auto ;
+}
+
+/* Archive_New-image */
+.Archive_New-image {
+    display: flex;
+    justify-content: space-between;
+}
+.section-image {
+    width: 49%;
+    position: relative;
+}
+.test {
+    max-width: 290px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%)
+}
+h3 {
+    font-size: 1.25rem;
+    padding-bottom: 4px;
+}
+.test p {
+    font-weight: bold;
+    margin: 0;
+}
+.section-image:hover {
+    opacity: 0.8; /* ホバー時の画像の不透明度を変更 */
+}
+
+/* #Fashion_Style */
+#Fashion_Style {
+    background-image: url(images/fashion.jpg);
+    height: 54vh;
+    width: 100%;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+}
+#Fashion_Style p {
+    margin-bottom: 30px;
+}
+
+/* ボタン */
+.button {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #2a2a2a;
+    border: 1px solid #2a2a2a;
+    padding: 15px 35px;
+}
+.button:hover {
+    opacity: 0.7;
+}
+
+/* Catalog_Antique */
+.Catalog_Antique-container {
+    max-width: 1200px;
+    padding: 0 auto;
+}
+#Catalog_Antique {
+    background-color: #F5F5F5;
+    padding: 60px 0;
+    text-align: center;
+}
+.Catalog,
+.Antique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.Catalog {
+    margin-bottom: 126px;
+}
+.Catalog_Antique-text p {
+    text-align: left;
+}
+#Catalog_Antique img {
+   width: 48%;
+   max-width: 100%;
+}
+.Catalog_Antique-text {
+    width: 48%;
+}
+.Catalog_Antique-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+.Catalog_Antique-text .button {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333333;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 5% 70px;
+    color: #fff;
+}
+.footer-text {
+    width: calc(100% / 3); /* footerの子要素を3分割 */
+}
+.footer-logo {
+    width: calc(100% / 3); /* footerの子要素を3分割 */
+    line-height: 200px;
+}
+.footer-text h4 {
+    margin-bottom: 20px;
+}
+.footer-text p,
+.footer-text li {
+    font-size: 0.75rem;
+    line-height: 2;
+}
+
+/* li疑似要素 */
+.footer-text li::before {
+    content: "-";       /* 各リストアイテムの前に「-」を追加 */
+    padding-right: 5px; /* 「-」とテキストの間に余白を追加 */
+}
+
+/* COPY */
+.copy p {
+    font-size: 0.75rem;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+/* レスポンシブ・ブレークポイント896px
+------------------------------- */
+@media screen and (max-width:896px) {
+    .Archive_New-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-image {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #Fashion_Style {
+        height: 53vh;
+    }
+
+    #Fashion_Style,
+    #Catalog_Antique {
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+
+    .Catalog,
+    .Antique {
+        flex-direction: column;
+    }
+
+    .Catalog {
+        margin-bottom: 0;
+    }
+
+    .Catalog h3 {
+        margin: 60px 0 30px;
+    }
+    .Antique h3 {
+        margin: 15px 0 30px;
+    }
+
+    #Catalog_Antique img,
+    .Catalog_Antique-text {
+        width: 100%;
+     }
+
+    .Catalog_Antique-text {
+        margin-bottom: 60px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        padding: 30px 5%;
+        width: 100%;
+    }
+
+    .footer-logo {
+        line-height: 0;
+        text-align: center;
+    }
+    .footer-logo,
+    .footer-text {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}

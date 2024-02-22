@@ -1,0 +1,128 @@
+/* CSS reset */
+h1,h2,h3,h4,ul,li,body,p{
+  padding: 0;
+  margin: 0;
+  color: #666666;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, " Ｐゴシック",ＭＳ "MS PGothic", sans-serif;  
+}
+* {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666666;  
+}
+p {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+/* container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3%;  
+}
+
+/* header */
+header {
+  text-align: center;
+}
+.logo {
+  width: 400px;
+  margin: 40px auto 40px;  
+}
+header img {
+  max-width: 100%;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* nav */
+nav {  
+  display: flex;
+  margin: 32px auto 40px;
+  font-size: 18px;
+  line-height: 36px; 
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+}
+nav a{
+  padding: 15px 30px;
+  transition: all 0.3s;
+  margin-right: 7px;
+}
+nav a:hover {
+  color: #d08047;
+  border-bottom: #d08047 3px solid;
+}
+
+
+/* section */
+section {
+  margin-bottom: 20px;
+}
+.td-main {
+  text-align: center;
+  font-weight: bold;
+  width: 30%; 
+}
+table th {
+  text-align: left;
+  padding: 10px;
+  background-color: #EEEEEE;
+}
+table td {
+  padding: 14px 10px;
+}
+section img {
+  width: 100%;
+  vertical-align: middle;
+}
+.td-header {
+  text-align: center;
+  font-weight: bold;
+  width: 30%;   
+}
+section h2 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  background-color: #d08047;
+  padding: 13px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+section a {  
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+section a:hover {
+  color: #d08047;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-size: 13px;
+  line-height: 27px;
+  padding: 35px 0 15px;
+}
+footer a {
+  transition: all 0.3s;
+}
+footer a:hover {
+  color: #d08047;
+}
+footer span {
+  font-size: 12px;
+  line-height: 24px;
+}
+footer P {
+  margin: 0;
+}

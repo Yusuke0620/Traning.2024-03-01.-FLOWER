@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>自作デジタル時計</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="自作デジタル時計">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Google Fonts ⇨ Press Start 2P -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- favicon -->
+        <link rel="icon" type="" href="">
+    <!-- リセットCSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/>
+    <!-- CSS -->
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- 時計本体 -->
+            <div class="clock-container">
+                <div class="clock-display">
+                    <!-- メインの時刻 -->
+                    <p class="clock-time">12:05</p>
+                    <i class="fa fa-bell"></i>
+                   
+
+                    <!-- 曜日と日付のコンテナ -->
+                    <div class="clock-date">
+                        <div class="weekday">
+                            <p class="youbi">曜日</p>
+                            <!-- 漢字一文字(例：水) -->
+                            <p class="seven-day"></p>
+                        </div>
+
+                        <div class="date">
+                            <div class="month-day">
+                                <p class="month">月</p>
+                                <p class="day">日</p>
+                            </div>
+                            <div class="main-date"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

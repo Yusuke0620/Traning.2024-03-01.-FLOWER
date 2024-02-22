@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> <!-- font-awesome -->
+<link rel="stylesheet" href="課題2_6お問い合わせ.CSS">
+<link rel="stylesheet" href="課題2_6お問い合わせ.responsive.CSS"> <!-- レスポンシブCSS -->
+<title>【お問い合わせ】ビジネス・企業向け 無料ホームページ</title>
+</head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <div class="header-left">
+          <a href="#">
+            <img src="images/logo.png" alt="ヘッダーロゴ" class="header-logo">
+          </a>
+        </div>
+
+
+        <!-- レスポンシブ用ハンバーガーメニュー(通常は非表示) -->
+        <div class="hamburger_menu">
+
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer_input" class="drawer_open"><span></span></label>       
+          
+          <!-- レスポンシブ用ナビメニュー(通常は非表示) -->
+          <div class="nav-responsive">
+            <ul>
+              <li><a href="#">ホーム<br><span>HOME</span></a></li>
+              <li><a href="#">会社概要<br><span>COMPANY</span></a></li>
+              <li><a href="#">サービス<br><span>SERVICE</span></a></li>
+              <li><a href="#">採用情報<br><span>RECRUIT</span></a></li>
+              <li><a href="#">リンク<br><span>LINK</span></a></li>
+              <li><a href="#">お問い合わせ<br><span>CONTACT</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- nav -->
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-li-fast">ホーム<br><span>HOME</span></a></li>
+          <li><a href="#">会社概要<br><span>COMPANY</span></a></li>
+          <li><a href="#">サービス<br><span>SERVICE</span></a></li>
+          <li><a href="#">採用情報<br><span>RECRUIT</span></a></li>
+          <li><a href="#">リンク<br><span>LINK</span></a></li>
+          <li><a href="#" class="nav-li-last">お問い合わせ<br><span>CONTACT</span></a></li>
+        </ul>
+      </nav>
+
+
+      <!-- main -->
+      <main>
+        <!-- contents -->
+        <div class="contents">
+
+          <!-- section1 -->
+          <section>
+            <h2>お問い合わせ</h2>
+            <p>
+              当ページと同じ３項目のお問い合わせフォーム（自動フォーム試用版）を簡単に使えるようにセットしています。
+              <br>
+              <span class="p-red">※当ページ（contact.html）はフォームの見本ページです。実際の自動フォームには使いませんのでご注意下さい。</span>
+            </p>
+            <p>
+              <span class="section-bold">■自動フォームを使う場合（※編集に入る前にご確認下さい）</span>
+              <br>
+              あなたのメールアドレス設定と、簡単な編集だけで使えます。<a href="#">こちらのマニュアルをご覧下さい。</a>
+            </p>
+            <p>
+              <span class="section-bold">■自動フォームを使わない場合</span>
+              <br>
+              テンプレートに梱包されている「form.html」「confirm.html」「finish.html」の3枚のファイルを削除して下さい。
+            </p>
+
+            <!-- table -->
+            <table border="1">
+              <tbody>
+                <tr>
+                  <th>お名前※</td>
+                  <td><input type="text"></td>
+                </tr>
+                <tr>
+                  <th>メールアドレス※</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                  <th>お問い合わせ詳細※</td>
+                  <td><textarea rows="10"></textarea></td>
+                </tr>
+              </tbody>
+            </table>           
+          </section>
+          <!-- button -->
+          <div class="button-container">
+            <button class="confirm">内容を確認する</button>
+          </div>
+        </div>
+        
+
+
+        <!-- aside -->
+        <aside>
+          <div class="section-aside">
+            <div class="inside">
+              <h4>Menu</h4>
+              <ul>
+                <li><a href="#">メニュー</a></li>
+                <li><a href="#">メニュー</a></li>
+                <li><a href="#">メニュー</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="section-aside2">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#">メニュー</a></li>
+              <li><a href="#">メニュー</a></li>
+              <li><a href="#">メニュー</a></li>
+            </ul>
+          </div>
+          <!-- section-aside3 -->
+          <div class="section-aside3">
+            <div class="inside">
+              <h4>製品情報</h4>
+              <div class="aside-contents">
+                <a href="#">
+                  <img src="images/sample1.jpg">         
+                    <span class="y1">製品情報</span>
+                    <br>簡単な説明をここに入れます。                      
+                </a>  
+              </div>                 
+              <div class="aside-contents">
+                <a href="#">
+                  <img src="images/sample1.jpg">         
+                    <span class="y1">製品情報</span>
+                    <br>簡単な説明をここに入れます。           
+                </a>  
+              </div>                 
+              <div class="aside-contents">
+                <a href="#">
+                  <img src="images/sample1.jpg">         
+                    <span class="y1">製品情報</span>
+                    <br>簡単な説明をここに入れます。                         
+                </a>  
+              </div>
+            </div>
+
+          </div>
+          <!-- section-aside4 -->
+          <div class="section-aside4">
+            <h4>製品情報</h4>
+            <div class="aside-contents">
+              <a href="#">
+                <img src="images/sample1.jpg">         
+                  <span class="y1">製品情報</span>
+                  <br>簡単な説明をここに入れます。                       
+              </a>  
+            </div>
+            <div class="aside-contents">
+              <a href="#">
+                <img src="images/sample1.jpg">         
+                  <span class="y1">製品情報</span>
+                  <br>簡単な説明をここに入れます。                          
+              </a>  
+            </div>
+            <div class="aside-contents">
+              <a href="#">
+                <img src="images/sample1.jpg">         
+                  <span class="y1">製品情報</span>
+                  <br>簡単な説明をここに入れます。                        
+              </a>  
+            </div>
+          </div>
+          <!-- section-aside5 -->
+          <div class="section-aside5">
+            <div class="inside">
+              <h4>運営</h4>
+            <p>
+              <span class="aside-footer">
+                株式会社SAMPLE COMPANY
+              </span>
+              <br>
+              東京都XX区XXXXビル3F
+              <br>
+              TEL:03-0000-0000
+              <br>
+              (AM9:00〜PM5:00 土日祝休み)
+            </p>
+            </div>          
+          </div>        
+        </aside>
+      </main>  
+
+
+      <!-- footer -->
+      <footer>    
+          Copyright© <a href="#">SAMPLE COMPANY</a> All Rights Reserved.
+          <br>
+          <a href="#" class="footer-Template-Party">《Web Design:Template-Party》</a>  
+      </footer>
+    </div>
+
+    
+    <!-- button -->
+    <p class="scrollTopBtn">
+      <a href="#">↑</a>  
+    </p>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+/*「float」「position」一括全解除 */
+* {
+  float: none;
+  position: static;
+}
+
+  img {
+  /*最大幅を100％にして崩れを防ぐ */
+  max-width: 100%;
+  /*高さ指定autoで、画像自体の比率が変わって崩れるのも防ぐ */
+  height: auto;
+}
+
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+
+  /* navバーを非表示にする */
+  nav {
+    display: none; 
+  }
+
+  .header-logo {
+    width: 200px;
+  }
+
+  main {
+    padding: 0 3%;
+  }
+
+  /* asideを下に移動させる */
+  .contents {
+    width: 100%; 
+  }
+
+  /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+  /* ハンバーガーアイコンの設置スペース */
+
+  /* 外枠 */
+  .drawer_open {
+    border: 1px solid black;
+  }
+
+  /* 三本線展開 */
+  .drawer_open span,
+  .drawer_open span::before,
+  .drawer_open span::after {
+    display: block;  
+  }
+
+  /* ハンバーガーメニューナビ展開時 */
+  #drawer_input:checked ~ .nav-responsive {
+    opacity: 1;
+    visibility: visible; /* 表示 */    
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+  /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+  /* 青色のh2タグ */
+  h2 {  
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 21px;
+  }
+
+  /* h2の縦ライン疑似要素 */
+  h2::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: 5px;
+    bottom: 5px;
+    left: 10px;
+    width: 3px;
+    background-color: #889EF0;
+  }
+
+  .section1-p {
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 20px 0 65px;
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+  }
+
+  section p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+    padding: 0 10px;    
+    color: #666666;    
+  }  
+
+
+
+  /* table */
+  table {
+    font-size: 12px;
+    line-height: 18px;   
+  }
+
+  th {    
+    width: 110px;
+    padding: 5px;
+  }
+
+  td {
+    padding: 5px;    
+  }
+
+  section p {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 10px;
+  }
+
+  .section2-p-bottom {
+    margin-bottom: 65px;
+  }
+
+
+  h3 {
+    font-size: 14px;
+    padding: 5px 10px;    
+  }
+
+  h4 {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .code {
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+
+  /* aside */
+  .section-aside,
+  .section-aside2,
+  .section-aside3,
+  .section-aside4 {      
+    width: 100%;    
+  }
+  
+  .section-aside5 {    
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+
+  .section-aside a,
+  .section-aside2 a {
+    font-size: 12px;
+    padding: 2px 10px;
+  }
+
+  .aside-contents {
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+
+  .aside-footer {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .inside {
+    padding: 9px;
+  }
+
+  .inside p {
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  
+  /* footer */
+  footer {
+    font-size: 10px;
+    padding: 13px 0 11px 0;
+    line-height: 14px;
+  }
+
+  .footer-Template-Party {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  /* button */
+  .scrollTopBtn a{  
+    bottom: 11.8%;
+    right: 3%;    
+  }
+
+
+
+
+  /* タブレット対応 */
+  @media (max-width: 1000px) {
+
+    aside {
+      width: 100%;
+      clear: left;
+    }
+  }
+}

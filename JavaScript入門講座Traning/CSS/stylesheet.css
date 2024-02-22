@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    font-family: "sans-serif";
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #000;
+}
+div {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 12.5rem;
+    box-shadow: 0 0 1rem #ddd;
+}
+div img {
+    display: none;
+}
+.test {
+    font-weight: bold;
+}
+/* testBg */
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+/* textarea */
+#textForm {
+    width: 500px;
+    height: 300px;
+    font-size: 2rem;
+}
+#textCount {
+    font-weight: bold;
+}
+
+.countRed {
+    color: rgb(255, 0, 0); /* 文字数が11以上の場合 */
+}
+
+.countwhite {
+    color: yellow; /* 追加の条件に基づく色変更を想定 */
+}

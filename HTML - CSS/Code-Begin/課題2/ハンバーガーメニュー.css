@@ -1,0 +1,92 @@
+/* レスポンシブ用ハンバーガーメニュー(通常は非表示) */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  top: 25px;
+  right: 10px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  position: relative;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  height: 4px;
+  width: 30px;
+  background: #333; 
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 10px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 10px;
+}
+
+
+
+/* アイコンがクリックされたら真ん中の線を透明にし、上下の線をバツ印に変更 */
+#drawer_input:checked ~ .drawer_open span {
+  background: transparent; /* 真ん中の線を消す */
+}
+
+/* クリックされたときの線の長さを変更し、中央に寄せる */
+#drawer_input:checked ~ .drawer_open span::before,
+#drawer_input:checked ~ .drawer_open span::after {
+  width: 40px; /* 上下の線を40px */
+  transform: translateX(-4.5px); /* 上下のラインを左に4.5px移動 */  
+}
+
+#drawer_input:checked ~ .drawer_open span::before {
+  transform: translateX(-4.5px) translateY(10px) rotate(45deg); /* 上の線を中央に移動し、45度回転 */
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  transform: translateX(-4.5px) translateY(-10px) rotate(-45deg); /* 下の線を中央に移動し、-45度回転 */
+}
+
+
+
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    border: 1px solid black;/* アイコン外枠 */
+  }
+
+  /* メニュー展開時 */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    display: block;
+  } 
+
+  /* ハンバーガーメニューがクリックされたときにナビメニューを表示 */
+  #drawer_input:checked ~ .nav-responsive {
+    opacity: 1; /* 完全に不透明に */
+    visibility: visible; /* 表示 */
+    transition: opacity 0.5s, visibility 0.5s; /* 透明度と可視性の変化をトランジションする */
+  }
+
+
+
+
+  .nav-responsive {
+    display: none;
+    visibility: hidden;
+  }

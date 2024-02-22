@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif;
+    color: #2b2a27;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+/* /ここまで共通設定 */
+
+/* #HEADER
+------------------------------- */
+#page_header {
+    background-image: url(images/mainvisual.jpg);
+    min-height: 100vh;
+}
+.big_bg {
+    background-size: cover;
+    background-position: center top;
+}
+
+.sub_container {
+    text-align: center;
+    margin-top: 85px;
+    padding: 0 20px;
+}
+section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.section_menu {
+    display: flex;
+    margin: 80px 0 60px;
+}
+.section_menu img {
+    height: 500px; /* 画像の高さ */
+    object-fit: cover; /* 画像のアスペクト比を維持しつつ、コンテナに合わせる */
+    width: calc(100% / 3); /* 画像の幅をセクションの3分の1に設定 */
+}
+
+.section_button {
+    text-align: center;
+}
+.button {
+    display: inline-block; /* 縮小した時にborderレイアウト崩れを防ぐ */
+    font-size: 0.875rem;
+    color: #2b2a27;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 18px 60px;
+    border: 1px solid #2B2A27;
+}
+
+.sns {
+    margin-top: 97px;
+}
+.sns ul{
+    display: flex;
+    justify-content: center;
+}
+.sns li {
+    list-style: none;
+}
+.sns li a{
+    color: #2b2a27;
+    margin: 0 10px;
+    font-size: 0.75rem;
+}
+
+/* FOOTER
+------------------------------- */
+footer {
+    text-align: center;
+}
+footer p {
+    font-size: 0.75rem;
+    margin: 19px 0 20px 0;
+}
+
+
+/* レスポンシブ・ブレークポイント834px
+------------------------------- */
+@media screen and (max-width: 834px) {
+    .section_menu {
+        flex-direction: column;
+    }
+    .section_menu img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

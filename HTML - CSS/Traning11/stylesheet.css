@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+  color: #333333;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* /ここまで共通設定 */
+
+
+/* HEADER
+------------------------------- */
+header {
+    max-width : 1000px;
+    margin: 0 auto 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #C3C3C3;
+}
+
+.header-logo {
+    width: 110px;
+    margin: 40px auto;
+}
+
+nav,
+.left-nav,
+.right-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-nav li {
+    margin-right: 13px;
+}
+
+.right-nav li {
+    margin-left: 13px;
+}
+
+/* MAIN
+------------------------------- */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.mainVisual {
+    width: 50%;
+}
+
+.main-section {
+    width: 50%;
+    padding-left: 60px;
+}
+
+.section-title {
+    font-size: 1rem;
+    padding: 20px 0;
+    border-top: 1px solid #C3C3C3;
+    border-bottom: 1px solid #C3C3C3;
+}
+
+.section-text {
+    margin: 25px 0 35px;
+    line-height: 1.9;
+}
+
+.TAX {
+    margin: 25px 0 30px;
+}
+
+/* -----------------
+table
+----------------- */
+/* 全体のテーブルスタイル */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+table th {
+    padding: 10px;
+    font-weight: normal;
+}
+
+/* クラス color、size、quantityの横幅比率設定 */
+.color,
+.size     { width: 20%; }
+.quantity { width: 60%; }
+
+table td {
+    padding: 10px;
+}
+
+/* 縦線のボーダースタイル */
+.order-table th,
+.order-table td {
+    border-right: 1px solid #c3c3c3;
+}
+/* 最後の列の縦線ボーダースタイル除去 */
+.order-table th:last-child,
+.order-table td:last-child {
+    border-right: none;
+}
+
+/* 横線のボーダースタイル */
+.order-table tr,
+.order-table th {
+    border-bottom: 1px solid #c3c3c3;
+ }
+/* 最後の行の横線ボーダースタイル除去 */
+.order-table tr:last-child {
+    border-bottom: none;
+}
+
+/* ドロップダウンメニュー */
+td select {
+    width: 100%;
+    border: 1px solid #c3c3c3;
+    padding-left: 10px;
+    -webkit-appearance: menulist; /* Chrome、Safari、Opera */
+    -moz-appearance: menulist;    /* Firefox */
+    appearance: menulist;         /* 標準の指定 */
+}
+
+/* ボタン */
+.button {
+    display: block;
+    text-align: center;
+    border: 1px solid #4B4B4B;
+    color: #fff;
+    background-color: #4B4B4B;
+    padding: 15px 0;
+}
+
+/* size-item */
+.size-item table {
+    margin: 30px 0;
+}
+
+.size-item tr,
+.size-item th,
+.size-item td {
+    border: 1px solid #c3c3c3;
+}
+
+.size-item th {
+    background-color: #ECEBEB;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.625rem;
+}
+
+/* レスポンシブ・ブレークポイント896px
+------------------------------- */
+@media screen and (max-width:896px) {
+    header {
+        border-bottom: none;
+        margin: 0 auto;
+        padding: 0 15px 15px
+    }
+
+    .header-logo {
+        margin: 30px auto 20px;
+    }
+
+    nav {
+        overflow-x: scroll;
+    }
+
+    main {
+        flex-direction: column;
+        margin-bottom: 55px;
+    }
+
+    .mainVisual {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .mainVisual img {
+        overflow: hidden;
+    }
+
+    .main-section {
+        width: 100%;
+        padding: 10px 15px 15px;
+    }
+
+    .section-text {
+        margin: 20px 0 35px
+    }
+}
+
+
+
+
+
+
+
+

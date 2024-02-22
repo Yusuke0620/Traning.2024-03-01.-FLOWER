@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif;
+    color: #2b2a27;
+}
+
+img {
+  max-width: 100%;
+}
+/* /ここまで共通設定 */
+
+
+/* MAIN
+------------------------------- */
+.recipe-img {
+    background-size: cover;
+    background-position: center top;
+}
+
+.contents {
+    display: flex;
+    margin-bottom: 58px;
+}
+
+.recipe-img, .header-recipe {
+    width: 50%; /* これにより、これらの要素は利用可能な空間を1:1の比率で共有します */
+}
+
+.main-img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover; /* 画像のアスペクト比を維持しつつ、コンテナに合わせる */
+}
+.header-recipe {
+    padding: 0 5%;
+    margin-top: 40px;
+}
+.header-recipe h1 {
+    font-size: 1.75rem;
+}
+.header-recipe h2 {
+    font-size: 1.25rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.header-recipe p {
+    margin: 20px 0 0;
+}
+
+section {
+    margin-top: 40px;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+dt {
+    text-align: left; /* dtのテキストを右揃えにする */
+    width: 90%;
+    border-bottom: 1px dotted #ccc; /* 下線を追加 */
+    padding: 6px 0;
+}
+
+dd {
+    text-align: right; /* ddのテキストを左揃えにする */
+    width: 10%;
+    border-bottom: 1px dotted #ccc; /* 下線を追加 */
+    padding: 6px 0;
+}
+
+.making li {
+    border-bottom: 1px dotted #ccc; /* 下線を追加 */
+    padding: 6px 0;
+    margin-left: 20px;
+}
+
+.section_button {
+    text-align: center;
+}
+.button {
+    display: inline-block; /* 縮小した時にborderレイアウト崩れを防ぐ */
+    font-size: 0.875rem;
+    color: #2b2a27;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 18px 60px;
+    border: 1px solid #2B2A27;
+}
+
+.sns {
+    margin-top: 97px;
+}
+.sns ul{
+    display: flex;
+    justify-content: center;
+}
+.sns li {
+    list-style: none;
+}
+.sns li a{
+    color: #2b2a27;
+    margin: 0 10px;
+    font-size: 0.75rem;
+}
+
+/* FOOTER
+------------------------------- */
+footer {
+    text-align: center;
+}
+footer p {
+    font-size: 0.75rem;
+    margin: 19px 0 20px 0;
+}
+
+/* レスポンシブ・ブレークポイント834px
+------------------------------- */
+@media screen and (max-width: 834px) {
+    .contents {
+        flex-direction: column;
+    }
+    .recipe-img,
+    .header-recipe {
+        width: 100%;
+    }
+    .main-img {
+        height: auto;
+    }
+
+}

@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+* { 
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+    font-family: Meiryo;
+    color: #383e45;
+}
+/* /ここまで共通設定 */
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* ヘッダー
+------------------------------- */
+.header-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    width: 120px;
+    margin-top: 10px;
+
+}
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+.main-nav a {
+    color: #383e45;
+    margin-left: 30px;
+}
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+/* IMAGE
+------------------------------- */
+.main-image img{
+    height: 600px; /* トリミング後の画像の高さ */
+    width: 100%;
+    object-fit: cover;  
+    margin-bottom: 20px;
+}
+
+/* section
+------------------------------- */
+section {
+  text-align: center;
+  margin-top: 80px;
+}
+.section-profile {
+  display: flex;
+  justify-content: center;
+}
+.section-title {
+  font-size: 2rem;
+  border-bottom: 1px solid #383e45;
+  margin: 0 auto 62px;
+  display: inline-block;
+}
+
+.section-text h3 {
+  font-size: 1rem;
+  text-align: left;
+  margin: 0 0 5px 30px;  
+}
+.profile-image {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.section-profile p {
+  margin-left: 30px;
+  font-size: 0.875rem;
+  text-align: left;
+}
+.section-text {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* item-contents */
+.item-contents {
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  width: 32%;
+}
+.item h3 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.item p {
+  font-size: 0.875rem;
+}
+
+/* footer */
+footer {
+  margin-top: 110px;
+  text-align: center;
+  font-size: 0.5rem;
+}
+footer p {
+  margin-bottom: 10px;
+}
+
+
+/* レスポンシブ・スマホ用
+------------------------------- */
+@media(max-width: 600px) {
+  .main-image img {
+    height: calc(100vh - 60px);
+  }
+
+  .section-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-text h3,
+  .section-text p {
+    margin: 10px 0 0 0;
+  }
+  .item-contents {
+    flex-direction: column;
+    
+  }
+  .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

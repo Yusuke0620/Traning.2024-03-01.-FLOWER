@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body{
+  font-size: 0.875rem;
+  font-family: Meiryo;
+  color: #24292e;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #24292e;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* /ここまで共通設定 */
+
+/* HEADER
+------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.header-logo {
+    display: block;
+    width: 120px;
+}
+.header-menu {
+    display: flex;
+}
+.header-menu li {
+    margin-left: 32px;
+}
+.header-menu li:hover {
+    opacity: 0.7;
+}
+.instagram {
+    width: 20px;
+}
+.instagram img {
+    align-items: center;
+}
+
+/* MAINVISUAL
+------------------------------- */
+.mainvisual {
+    height: 420px;
+    object-fit: cover;
+    margin: 0 auto 80px;
+    background-image: url(images/mainvisual-pc.jpg);/* 画像を中央揃え */
+    background-position: center;
+}
+
+/* MAIN
+------------------------------- */
+section {
+    margin-bottom: 130px;
+}
+section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 65px;
+}
+.About p {
+    margin-bottom: 30px;
+}
+.Works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.3%;
+}
+.Works img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.section-works {
+    margin-bottom: 150px;
+}
+
+/* NEWS */
+dl {
+    border-top: 1px solid #C8C8C8;
+    display: flex;
+    flex-wrap: wrap;
+}
+dt,dd {
+    border-bottom: 1px solid #C8C8C8;
+    padding: 15px;
+}
+dt {
+    width: 20%;
+}
+dd {
+    width: 80%;
+}
+
+/* CONTACT */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #C8C8C8;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+textarea {
+    height: 160px;
+}
+label {
+    width: 16%;
+}
+.contact-form {
+    display: flex;
+}
+.button {
+    display: block;
+    padding: 18px 85px;
+    margin: 25px auto 0;
+    color: #fff;
+    background-color: #24292e;
+    border: 1px solid #24292e;
+}
+.button:hover {
+    color: #24292e;
+    background-color: #fff;
+    border: 1px solid #24292e;
+}
+
+/* FOOTER
+------------------------------- */
+footer {
+    font-size: 0.5rem;
+    color: #fff;
+    text-align: center;
+    background-color: #24292e;
+    padding: 12px 0;
+}
+
+
+/* レスポンシブ・ブレークポイント600px
+------------------------------- */
+@media screen and (max-width:600px) {
+    header {
+        flex-direction: column;
+        margin: 15px auto;
+    }
+    .header-menu {
+        align-items: center;
+        margin-right: 20px;
+    }
+    .header-menu li {
+        font-size: 0.81rem;
+        margin-left: 20px;
+    }
+    .instagram {
+        display: block;
+    }
+
+/* MAINVISUAL
+------------------------------- */
+    .mainvisual {
+        background-image: url(images/mainvisual-sp.jpg);
+        background-size: cover;
+    }
+    .Works {
+        display: flex;
+        flex-direction: column;
+    }
+    section {
+        margin-bottom: 70px;
+    }
+    .section-works {
+        margin-bottom: 80px;
+    }
+    section h2 {
+        margin-bottom: 40px;
+    }
+
+    dl {
+        display: block;
+    }
+    dt {
+        border: none;
+        padding: 15px 17px 0;
+    }
+    dd {
+        width: 100%;
+        padding: 0 20px 15px;
+    }
+
+    .contact-form {
+        display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+    }
+    .button {
+        margin: 20px auto 0;
+    }
+}
+

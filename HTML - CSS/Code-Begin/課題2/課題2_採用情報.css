@@ -1,0 +1,482 @@
+/* CSS reset */
+h1,h2,h3,h4,ul,li,html,body,nav,dd {
+  padding: 0;
+  margin: 0;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino  Gothic Pro", メイリオ, Meiryo, Osaka, " Ｐゴシック", "MS PGothic", sans-serif;;
+}
+* {
+  box-sizing: border-box; 
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  background-color: #E5E5E5;
+}
+/* container */
+.container {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 100px 10px rgb(206, 206, 206);
+}
+
+/* header */
+header {
+  border-top: 5px solid #0E36CA;
+  width: 100%;
+  height: 105px;  
+  position: relative;  
+}
+
+.header-logo {
+  width: 300px;
+  position: absolute;
+  top: 48%;
+  left: 4%;
+  transform: translateY(-50%);
+}
+/* nav */
+nav {  
+  border-bottom: 1px solid #D2D2D2;
+  overflow: hidden;  
+}
+nav li a {
+  text-align: center;  
+  border-right: 1px solid #D2D2D2;
+  border-top: 1px solid #D2D2D2;
+  width: 16.6%;
+  float: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #666666; 
+  vertical-align: top;
+  padding: 13px 0;
+  transition: all 0.5s;
+}
+nav li a:hover {
+  color: #0E36CA;
+  background-color: #e6ebfa;
+}
+nav span {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  display: block;
+  opacity: 0.5;
+}
+.nav-li-fast {
+  width: 17%;
+}
+.nav-li-last {
+  border: none;
+  border-top: 1px solid #D2D2D2;
+}
+nav a {
+  position: relative;
+}
+nav a:hover:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 5px;
+  width: 3px;
+  background-color: #0E36CA;
+}
+
+
+/* main */
+main {  
+  padding: 35px; 
+  overflow: hidden; 
+}
+/* contents */
+.contents {
+  background-color: #fff;
+  float: left;  
+  width: 72%; 
+}
+h2 {
+  color: #fff;
+  background-color: #0E36CA;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 10px 43px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background: linear-gradient(to left, #113FEB, #103CE3, #0F3ADC);
+  box-shadow: 3px 3px 10px 0px #DCDCDC;
+  position: relative;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 20px;
+  width: 3px;
+  background-color: #889EF0;
+}
+/* section */
+section p { /* sectionのpタグレイアウト */
+  margin: 0 0 15px 0;
+  padding: 0 20px 0 0;
+  font-size: 15px;
+  color: #666666;
+  line-height: 30px;  
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+  border-color: #D2D2D2;
+  color: #666666;
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+th {
+  width: 170px;
+  padding: 13.5px 15px;
+  font-weight: normal;
+}
+td {  
+  padding: 13.5px 15px;
+}
+.thead {
+  text-align: left;
+}
+
+
+/* aside */
+aside {
+  color: #66667C;
+  float: right;
+  width: 27%;   
+}
+.section-aside {  
+  border: 1px solid #D2D2D2;
+  width: 89%;
+  margin: 0 auto 20px;
+  float: right;
+  background: linear-gradient(to bottom, #fff, #EEEEEE);
+}
+
+.inside {
+  border: 1px solid #fff;
+  padding: 9px 9px 10px 9px;
+}
+
+h4 {
+  font-size: 15px;
+  padding: 18px 10px;
+  border-bottom: 1px solid #D2D2D2;
+  background-color: #EEEEEE;
+  border-top: 5px solid #0E36CA;
+  line-height: 2;
+}
+
+.section-aside img {
+  width: 17%;
+}
+
+.section-aside a {
+  font-size: 15px;
+  color: #66667C;
+  display: block;
+  border-bottom: 1px solid #D2D2D2;
+  padding: 5px 10px;  
+  line-height: 2;
+  transition: all 0.5s;
+}
+
+.section-aside a:hover {
+  background-color: #fff;
+  color: #0E36CA;
+}
+
+/* section-aside2 */
+.section-aside2 {    
+  width: 89%;
+  margin: 0 auto 20px;
+  float: right;
+}
+
+.section-aside2 a {
+  font-size: 15px;
+  color: #66667C;
+  display: block;
+  padding: 5px 10px;
+  border-bottom: 1px solid #D2D2D2;
+  line-height: 2;
+  transition: all 0.5s;
+}
+
+.section-aside2 a:hover {
+  color: #0E36CA;
+}
+
+.section-aside2 h4 {
+  background-color: #EEEEEE;
+  border-top: 5px solid #0E36CA;
+}
+
+/* section-aside3 */
+.section-aside3 {  
+  border: 1px solid #D2D2D2;
+  width: 89%;
+  margin: 0 auto 20px;
+  float: right;
+  background: linear-gradient(to bottom, #fff, #EEEEEE);
+}
+
+.section-aside3 a {
+  display: block;
+  color: #666666;
+  border-bottom: 1px solid #D2D2D2;
+  padding: 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.5s;
+  line-height: 1.2;
+  overflow: hidden; 
+}
+
+.section-aside3 a:hover {
+  background-color: #fff;
+  color: #0E36CA;
+}
+.section-aside3 img {
+  width: 20%;
+  float: left;
+  cursor: pointer;
+  margin-right: 5px;  
+}
+.section-aside3 li {
+  float: left;  
+}
+.y1 {
+  color: #0E36CA; 
+  cursor: pointer;  
+}
+.aside-contents {
+  width: 100%; 
+}
+/* section-aside4 */
+.section-aside4 {    
+  width: 89%;
+  margin: 0 auto 15px;
+  float: right;
+}
+
+.section-aside4 a {  
+  display: block;
+  color: #666666;
+  border-bottom: 1px solid #D2D2D2;
+  padding: 10px;
+  font-size: 11px;
+  transition: all 0.5s;
+  line-height: 1.2;
+  overflow: hidden; 
+}
+
+.section-aside4 a:hover {
+  color: #0E36CA;
+}
+
+.section-aside4 img {
+  width: 20%;
+  float: left;
+  margin-right: 5px;  
+  cursor: pointer; 
+}
+
+/* section-aside5 */
+.section-aside5 {  
+  border: 1px solid #D2D2D2;
+  width: 89%;
+  margin: 0 auto 20px;
+  float: right;
+  background: linear-gradient(to bottom, #fff, #EEEEEE);
+}
+
+.aside-footer {
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.section-aside5 p {
+  text-align: center;
+  padding: 3px;
+  margin: 0;
+  font-size: 11px;
+}
+
+
+/* footer */
+footer {
+  background-color: #0E36CA;
+  color: #fff;
+  clear: left;
+  text-align: center;
+  font-size: 13px;  
+  padding: 15px 0 12px 0; 
+}
+
+footer a {
+  color: #fff;  
+  transition: all 0.5s;
+}
+
+footer a:hover {
+  color: #0E36CA;
+}
+
+.footer-Template-Party {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+
+/* button */
+.scrollTopBtn a{
+  position: fixed;
+  display: block;
+  bottom: 100px;
+  right: 50px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  border: 1px solid #fff;
+  padding: 18px 20px;
+  transition: all 0.5s;
+  z-index: 100;
+}
+
+.scrollTopBtn a:hover {
+  background-color: rgba(102,102,102,10);
+}
+
+.scrollTopBtn {
+  font-size: 10px;
+  margin: 0;
+}
+
+
+
+
+
+/* レスポンシブ用ハンバーガーメニュー(通常は非表示) */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 52px;
+  width: 52px;
+  top: 23px;
+  right: 3%;
+  background-color: #fff;
+  justify-content: center;/* flex横の中央揃え */
+  align-items: center;/* flex縦の中央揃え */
+  float: right;/* 親要素の右寄せ */
+  position: relative;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';  
+  height: 4px;/* 三本線の高さ */
+  width: 30px;/* 三本線の横幅 */
+  background: black; 
+  position: absolute;
+  display: none;
+}
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 10px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 10px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にし、
+上下の線をバツ印に変更 */
+#drawer_input:checked ~ .drawer_open span {
+  background: transparent; /* 真ん中の線を消す */
+}
+
+/* クリックされたときの線の長さを変更し、中央に寄せる */
+#drawer_input:checked ~ .drawer_open span::before,
+#drawer_input:checked ~ .drawer_open span::after {
+  width: 38px; /* ×印の線の長さを38pxに設定 */
+  /* 線を左に少し移動して中央に寄せる */
+  height: 3px;
+}
+
+/* 上の線を左に少し移動して中央に寄せる、45度回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  transform: translateX(-4.3px) translateY(10px) rotate(45deg); 
+}
+
+/* 下の線を左に少し移動して中央に寄せる、-45度回転 */
+#drawer_input:checked ~ .drawer_open span::after {
+  transform: translateX(-4.3px) translateY(-9px) rotate(-45deg); 
+}
+
+
+/* レスポンシブ用ナビメニュー(通常は非表示) */
+
+/* レスポンシブナビメニューの基本スタイル */
+.nav-responsive {
+  opacity: 0; /* 初期状態では透明 */
+  visibility: hidden; /* 初期状態では非表示 */  
+  position: absolute; /* メニューを固定位置に */
+  top: 100px; /* 上端から配置 */  
+  width: 100%; /* 全幅 */  
+  background: rgba(0,0,0,0.8); /* 背景色 */
+  z-index: 100; /* zIndexを設定して他の要素より上に */   
+}
+
+/* 'visibility'と'opacity'を組み合わせる理由
+
+opacity のみを使用する場合、透明度が0の要素は見えなくなりますが、
+ページ上には存在し続け、スペースを占め、インタラクションが可能な状態になります。
+➡クリックしたりできる状態が続いている※単に見えなくなるだけなら適している。
+visibilityで要素の存在を制御します。
+
+*/
+
+.nav-responsive li {
+  list-style: none; /* リストマーカーを消す */ 
+  line-height: 2;
+  border-bottom: 1px solid #fff; /* リスト区切り下線 */
+}
+
+.nav-responsive a {
+  display: block; /* marginとpaddingの制御が可能 */
+  color: #ffffff; /* リンクの色 */
+  font-size: 20px; /* フォントサイズ */
+  padding: 19px 20px 15px 20px; /* 内側の余白 */ 
+  line-height: 1.1; /* 行間の調整 */
+  text-decoration: none; /* リンクの下線を消す */
+}
+
+.nav-responsive a span {  
+  font-size: 12px;
+}
