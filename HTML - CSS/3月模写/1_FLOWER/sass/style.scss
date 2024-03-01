@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+//*** グローバル変数 ***//
+$mainColor: rgb(63, 67, 74);  // 文字色
+
+//*** mixin ***//
+@mixin flexMode($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+*    { box-sizing: border-box; }
+html { font-size: 100%; color: $mainColor;}
+body { font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+img  { max-width: 100%; vertical-align: bottom; }
+li   { list-style: none; }
+a    { text-decoration: none; }
+
+h2 { font-size: 1.8125rem; }
+h3 { font-size: 1.625rem; }
+
+/* 横幅を設定するための共通クラス */
+
+
+
+/* /ここまで共通設定 */
+/*-------------------------------------------
+#mainVisual
+-------------------------------------------*/
+#mainVisual {
+    background-color: tan;
+    background-image: url("../images/mainVisual.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+/*-------------------------------------------
+#first1
+-------------------------------------------*/
+#first1 {
+    background-color: #FFFFFF;
+}
+
+/*-------------------------------------------
+#second2
+-------------------------------------------*/
+#second2 {
+    background-color: #F6F5F1;
+}
+
+/*-------------------------------------------
+#third3
+-------------------------------------------*/
+#third3 {
+    .third3-1 {
+        background-color: #ECDDD6;
+    }
+
+    .third3-2 {
+        background-color: #D9D0E3;
+    }
+
+    .third3-3 {
+        background-color: #C9D4DA;
+    }
+}
+
+/*-------------------------------------------
+#fourth4
+-------------------------------------------*/
+#fourth4 {
+    background-color: #F6F5F1;
+}
+
+/*-------------------------------------------
+#fifth5
+-------------------------------------------*/
+#fifth5 {
+    background-color: #F9F9F9;
+}
+
+/*-------------------------------------------
+#sixth6
+-------------------------------------------*/
+#sixth6 {
+    background-color: #F6F5F1;
+}
+
+/*-------------------------------------------
+#seventh7
+-------------------------------------------*/
+#seventh7 {
+    background-color: #F2E4E4;
+}
+
+/*-------------------------------------------
+#eighth8
+-------------------------------------------*/
+#eighth8 {
+    background-color: #FFFFFF;
+}
+
+/*-------------------------------------------
+#ninth9
+-------------------------------------------*/
+#ninth9 {
+    background-color: #F6F5F1;
+}
+
+/*-------------------------------------------
+#tenth10
+-------------------------------------------*/
+#tenth10 {
+    background-color: #ffffff;
+    background-image: url("../images/bg_app_bottom-de5cf589e38bd2038e4a7575fc900c805be8f4a1d5ad9a07530c6c9ec2d1bd9e.jpg");
+    height: 530px;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+/*-------------------------------------------
+#footer
+-------------------------------------------*/
+#footer {
+    background-color: #3F434A;
+}
+
+
+
+#third3 {
+    h3 {
+        font-size: 1.375rem; //599px以下も同じ文字サイズ
+    }
+}
+
+
+/* レスポンシブ・ブレークポイント599px
+------------------------------- */
+@media screen and (max-width:599px) {
+    h2 { font-size: 1.625rem; }
+    h3 { font-size: 1.375rem; }
+}
+/*-------------------------------------------
+
+-------------------------------------------*/
