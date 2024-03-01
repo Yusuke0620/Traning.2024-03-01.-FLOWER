@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.06rem;
 }
 
 img {
@@ -27,6 +28,7 @@ a {
 
 h2 {
   font-size: 1.8125rem;
+  line-height: 46px;
 }
 
 h3 {
@@ -34,16 +36,34 @@ h3 {
 }
 
 /* 横幅を設定するための共通クラス */
+.container {
+  text-align: center;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* /ここまで共通設定 */
 /*-------------------------------------------
 #mainVisual
 -------------------------------------------*/
 #mainVisual {
-  background-color: tan;
   background-image: url("../images/mainVisual.jpg");
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   min-height: 100vh;
+}
+#mainVisual .mainLogo {
+  width: 228px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*-------------------------------------------
@@ -51,6 +71,13 @@ h3 {
 -------------------------------------------*/
 #first1 {
   background-color: #FFFFFF;
+  padding: 65px 20px;
+}
+#first1 p {
+  font-size: 0.9375rem;
+  line-height: 26px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 /*-------------------------------------------
@@ -58,19 +85,109 @@ h3 {
 -------------------------------------------*/
 #second2 {
   background-color: #F6F5F1;
+  padding: 80px 0;
+}
+#second2 .second2-1 {
+  width: 56%;
+  text-align: left;
+}
+#second2 .second2-1 p {
+  font-size: 0.9375rem;
+  margin: 20px 0 33px;
+  line-height: 26px;
+}
+#second2 .second2-1 .second2-navLink {
+  display: flex;
+}
+#second2 .second2-1 .second2-navLink img {
+  /* 画像のサイズをそのまま維持する */
+  width: 165px;
+  height: 50px;
+  margin-right: 16px;
+}
+#second2 img {
+  width: 40%;
 }
 
 /*-------------------------------------------
 #third3
 -------------------------------------------*/
-#third3 .third3-1 {
+#third3 .big-bg1 {
+  background-image: url("../images/feature_img01-ec5a4fa540925093856a4600b9282663182201861ed3911f4dffad533dfbb207.jpg");
   background-color: #ECDDD6;
+  background-size: contain;
+}
+#third3 .big-bg1 .third3-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#third3 .third3-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 442px;
+  width: 900px;
+  padding: 100px 0;
+}
+#third3 .big-bg2 {
+  background-image: url("../images/feature_img02-73bb336631873b3edbb4e57f40a89a6ff353ff0d0b94a5feca71457431d5d127.jpg");
+  background-color: #D9D0E3;
+  background-size: contain;
+  background-position: right;
+}
+#third3 .big-bg2 .third3-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #third3 .third3-2 {
-  background-color: #D9D0E3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 442px;
+  width: 900px;
+  padding: 100px 0;
+  text-align: left;
+  width: 34%;
+}
+#third3 .big-bg3 {
+  background-image: url("../images/feature_img03-3b55fd1033c0d74d2c0a7eb96e18b021b26f5dd9c26818ce0644d510472f76b5.jpg");
+  background-color: #C9D4DA;
+  background-size: contain;
+}
+#third3 .big-bg3 .third3-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #third3 .third3-3 {
-  background-color: #C9D4DA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 442px;
+  width: 900px;
+  padding: 100px 0;
+}
+#third3 p {
+  font-size: 0.9375rem;
+  letter-spacing: 0.03rem;
+  text-align: justify;
+  margin-top: 12px;
+}
+#third3 .third3-1-1, #third3 .third3-3-1 {
+  text-align: left;
+  width: 34%;
+}
+#third3 .third3-2-1 {
+  text-align: left;
+  width: 100%;
 }
 
 /*-------------------------------------------
