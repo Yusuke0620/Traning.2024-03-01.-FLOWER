@@ -35,17 +35,24 @@ h3 {
   font-size: 1.625rem;
 }
 
+p {
+  font-size: 0.9375rem;
+  letter-spacing: 0.03rem;
+  line-height: 26px;
+}
+
 /* 横幅を設定するための共通クラス */
 .container {
   text-align: center;
 }
 
 .inner {
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: block;
 }
 
 /* /ここまで共通設定 */
@@ -74,8 +81,6 @@ h3 {
   padding: 65px 20px;
 }
 #first1 p {
-  font-size: 0.9375rem;
-  line-height: 26px;
   font-weight: 700;
   margin-top: 20px;
 }
@@ -87,14 +92,15 @@ h3 {
   background-color: #F6F5F1;
   padding: 80px 0;
 }
+#second2 .inner {
+  display: flex;
+}
 #second2 .second2-1 {
   width: 56%;
   text-align: left;
 }
 #second2 .second2-1 p {
-  font-size: 0.9375rem;
   margin: 20px 0 33px;
-  line-height: 26px;
 }
 #second2 .second2-1 .second2-navLink {
   display: flex;
@@ -176,8 +182,6 @@ h3 {
   padding: 100px 0;
 }
 #third3 p {
-  font-size: 0.9375rem;
-  letter-spacing: 0.03rem;
   text-align: justify;
   margin-top: 12px;
 }
@@ -195,6 +199,7 @@ h3 {
 -------------------------------------------*/
 #fourth4 {
   background-color: #F6F5F1;
+  padding-top: 60px;
 }
 
 /*-------------------------------------------
@@ -202,6 +207,32 @@ h3 {
 -------------------------------------------*/
 #fifth5 {
   background-color: #F9F9F9;
+  padding: 64px 0;
+}
+
+.fifth5-1-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 24px;
+}
+.fifth5-1-items img {
+  width: 70px;
+}
+.fifth5-1-items .fifth5-1-1-item {
+  width: 30%;
+}
+.fifth5-1-items .fifth5-1-1-item img {
+  width: 150px;
+}
+.fifth5-1-items .fifth5-1-1-item h4 {
+  margin: 15px 0 10px;
+  line-height: 28px;
+}
+.fifth5-1-items .fifth5-1-1-item p {
+  font-size: 0.8125rem;
+  line-height: 23px;
+  text-align: left;
 }
 
 /*-------------------------------------------
@@ -209,6 +240,24 @@ h3 {
 -------------------------------------------*/
 #sixth6 {
   background-color: #F6F5F1;
+  padding: 64px 0 60px;
+}
+#sixth6 h3 {
+  padding-bottom: 42px;
+}
+#sixth6 .sixth6-1 {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#sixth6 button {
+  color: rgb(63, 67, 74);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 2px solid rgb(63, 67, 74);
+  border-radius: 50px;
+  padding: 17px 60px;
+  margin-top: 40px;
 }
 
 /*-------------------------------------------
@@ -216,6 +265,64 @@ h3 {
 -------------------------------------------*/
 #seventh7 {
   background-color: #F2E4E4;
+  padding: 60px 0 77px;
+}
+#seventh7 .seventh7-1 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0 40px;
+  margin-top: 45px;
+}
+#seventh7 .seventh7-1-1-item {
+  width: 48%;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+#seventh7 .seventh7-1-1-item:nth-of-type(1) {
+  box-shadow: 1px 20px 30px #ECD0D0;
+}
+#seventh7 .seventh7-1-1-item:nth-of-type(2) {
+  box-shadow: -1px 20px 30px #ECD0D0;
+}
+#seventh7 .seventh7-1-1-item img {
+  width: 100%;
+  height: 280px;
+  border-radius: 30px 30px 0 0; /* 左上と右上の角のみを10pxで丸くする */
+  object-fit: cover;
+  background-color: #F2E4E4;
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 {
+  font-size: 0.875rem;
+  border-radius: 0 0 30px 30px; /* 左下と右下の角のみを10pxで丸くする */
+  padding: 25px 50px 40px 40px;
+  text-align: left;
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 h4 {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 ul {
+  margin: 20px 0;
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 ul li {
+  list-style-type: disc;
+  margin-left: 15px;
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 ul li::marker {
+  font-size: smaller; /* 丸のサイズを小さくする */
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 p {
+  font-size: 0.875rem;
+}
+#seventh7 .seventh7-1-1-item .seventh7-1-1-1 p:nth-of-type(2) {
+  font-weight: 700;
+  line-height: 25px;
+}
+#seventh7 h3 {
+  line-height: 42px;
 }
 
 /*-------------------------------------------
@@ -223,6 +330,19 @@ h3 {
 -------------------------------------------*/
 #eighth8 {
   background-color: #FFFFFF;
+  padding: 60px 0 70px;
+}
+#eighth8 .eighth8-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  flex-wrap: wrap;
+}
+#eighth8 .eighth8-1 img {
+  width: auto;
+  height: 38px;
 }
 
 /*-------------------------------------------
@@ -230,6 +350,28 @@ h3 {
 -------------------------------------------*/
 #ninth9 {
   background-color: #F6F5F1;
+  text-align: left;
+  padding: 44px 0 58px;
+}
+#ninth9 .inner {
+  padding: 0 20px;
+}
+#ninth9 h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#ninth9 dl dt {
+  line-height: 32px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+#ninth9 dl dd {
+  line-height: 29px;
+  letter-spacing: 0.03rem;
+  margin: 7px 0 20px 15px;
+}
+#ninth9 dl dd:last-child {
+  margin-bottom: 0;
 }
 
 /*-------------------------------------------
@@ -242,6 +384,30 @@ h3 {
   background-position: center;
   background-size: cover;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#tenth10 .tenth10-logo {
+  width: 180px;
+  margin-bottom: 17px;
+}
+#tenth10 p {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+#tenth10 .tenth10-navLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#tenth10 .tenth10-navLink .downLoad {
+  width: 165px;
+  height: 50px;
+  margin-right: 16px;
 }
 
 /*-------------------------------------------
@@ -249,12 +415,42 @@ h3 {
 -------------------------------------------*/
 #footer {
   background-color: #3F434A;
+  padding: 60px 20px 40px;
+}
+#footer .footer-ul1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+#footer .footer-ul1 a {
+  color: #ffffff;
+  line-height: 28px;
+}
+#footer .footer-ul2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 50px;
+}
+#footer .footer-ul2 img {
+  width: 32px;
+}
+#footer p {
+  font-size: 0.8125rem;
+  line-height: 23px;
+  color: rgb(140, 142, 146);
+  margin-top: 50px;
 }
 
 #third3 h3 {
   font-size: 1.375rem;
 }
 
+/* レスポンシブ・ブレークポイント599px
+------------------------------- */
 /* レスポンシブ・ブレークポイント599px
 ------------------------------- */
 @media screen and (max-width: 599px) {
