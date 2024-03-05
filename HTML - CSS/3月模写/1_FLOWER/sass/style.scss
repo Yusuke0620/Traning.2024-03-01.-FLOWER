@@ -13,10 +13,9 @@ $mainColor: rgb(63, 67, 74);  // 文字色
 *    { box-sizing: border-box; }
 html { font-size: 100%; color: $mainColor;}
 body { font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.06rem;}
-img  { max-width: 100%; vertical-align: bottom; }
 li   { list-style: none; }
 a    { text-decoration: none; }
-
+img { max-width: 100%; }
 h2 { font-size: 1.8125rem; line-height: 46px; }
 h3 { font-size: 1.625rem; }
 p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
@@ -185,7 +184,37 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
 #fourth4 {
     background-color: #F6F5F1;
     padding-top: 60px;
-
+    .fourth4-inner {
+        display: flex; /* 要素をフレックスボックスとして表示 */
+        gap: 24px;     /* 子要素間の間隔を24pxに設定 */
+        overflow: scroll; /* コンテンツが要素のサイズを超える場合にスクロールバーを表示 */
+        scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+        -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+        padding: 0 24px; /* 上下左右に24pxのパディングを持つ */
+    
+        a {
+            display: inline-block; /* インラインブロック要素として表示 */        
+            flex: 1; /* フレックスアイテムをフレックスコンテナの残りのスペースに合わせる */
+            min-width: calc(25% - 80px); /* 最小幅を計算して設定 */
+            word-break: break-all; /* 単語の途中で改行可能 */
+            text-align: justify; /* テキストを両端揃えにする */
+            position: relative; /* 相対位置指定 */
+    
+            img {
+                width: 100%; /* 画像の幅を100%に設定 */
+            }
+    
+            .fourth4-title {
+                position: absolute; /* 絶対位置指定 */
+                bottom: 12px; /* 下から12pxの位置に配置 */
+                left: 12px; /* 左から12pxの位置に配置 */
+                color: #ffffff;
+                font-size: 0.875rem;
+                font-weight: 700;
+                line-height: 20px;
+            }
+        }
+    }
 }
 
 /*-------------------------------------------
@@ -441,7 +470,171 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
     }
 }
 
+/*-------------------------------------------
+サポートボタン
+-------------------------------------------*/
+/* 既存のスタイル */
+#supportButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 15px 25px;
+    background-color: #3F434A;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 50px;
+    opacity: 1;
+    &:focus {
+        box-shadow: inset 0 0 0 4px #9da5b3; /* 内側に黒い4pxの線を引く */
+    }
+    .fa {
+        margin-right: 10px;
+    }
+}
+  
+  #formContainer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+    display: none; //普段は非表示}
+    width: 340px;
+    height: 540px;    
+    font-size: 0.875rem;
+    background-color: #F6F5F1;
 
+    #formHeader {
+        @include flexMode(center);
+        background-color: #3F434A;
+        height: 44px;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        h3 {
+            display: inline-block;
+            color: #ffffff;            
+            font-size: 0.875rem;
+        }        
+        /* 閉じるボタンのスタイルを追加 */
+        #closeFormButton {            
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #ccc;
+            width: 25px;
+            height: 25px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.1s;
+            &:hover {
+                background-color: #484d55;
+            }
+            &:active {
+                border: 3px solid #9da5b3; /* 内側に黒い1pxの線を引く */
+            }
+        }
+    }
+
+    #formMain {
+        padding: 12px 20px;
+
+        input, textarea {
+            width: 100%;
+            border: 1px solid #D8DCDE;
+            border-radius: 4px;
+            padding: 10px;
+            transition: all 0.4s;
+            &:hover {
+                border: 1px solid rgb(87, 87, 87); /* マウスカーソルが要素の上にある時に青い枠線を表示 */
+            }
+        }
+    
+        input {                
+            height: 40px;                
+        }        
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        #mail {            
+            p {
+                font-size: 0.75rem;
+            }
+            label {
+                margin: 5px 0 10px;
+                display: inline-block;
+            }
+        }
+
+        #text {
+            p {
+                font-size: 0.75rem;
+                line-height: normal;
+            }    
+        }
+    }
+
+    #formFooter {
+        @include flexMode(flex-end);
+        background-color: #ffffff;
+        height: 66px;
+        padding: 20px;
+        button {
+            padding: 10px 15px;
+            color: #ffffff;
+            background-color: #3F434A;
+            border-radius: 5px;
+        }
+    }
+  }
+
+  
+
+  
+
+  /* 既存のスタイルに加えて */
+.form-input, .form-textarea, .form-file-upload, .form-submit-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .form-textarea {
+    height: 100px;
+  }
+  
+  .show-form {
+    display: block;
+  }
+  
+  .hide-button {
+    display: none;
+  }
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
 
 /* レスポンシブ・ブレークポイント599px
 ------------------------------- */
@@ -458,3 +651,46 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
 /*-------------------------------------------
 
 -------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+// .wrapper {
+//     margin: 16px auto 0; /* 16pxの上部マージンを持つ */
+// }
+
+// .container2 {
+//     display: flex;
+//     flex-wrap: nowrap; /* ラップしないようにする */
+//     justify-content: start; /* コンテンツを左端に配置する */
+//     gap: 0 24px; /* 要素間の水平方向の間隔を24pxに設定 */
+//     overflow-x: scroll; /* 横方向のスクロールバーを表示 */
+//     padding: 0 24px; /* 左右に24pxのパディングを持つ */
+// }
+
+// .product_thumbnail {
+//     display: inline-block;
+//     position: relative;
+//     flex: 1;
+//     min-width: 36vw; /* 最小幅を36vwに設定 */
+//     word-break: break-all;
+//     text-align: justify;
+// }
+
+// .product_image {
+//     width: 100%;
+//     aspect-ratio: 0.6666;
+//     object-fit: cover;
+// }
+
+// .product_title {
+//     position: absolute;
+//     bottom: 12px;
+//     left: 12px;
+// }

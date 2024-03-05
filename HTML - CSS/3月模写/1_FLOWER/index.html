@@ -11,10 +11,10 @@
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/>
     <!-- CSS -->
         <link rel="stylesheet" href="./css/style.css">
-        <script src="script.js" defer></script>
+        <script src="script.js" async></script>
     </head>
 
-    <body>
+    <body class="pages_controller">
         <div id="mainVisual">
             <h1><img src="./images/mainLogo.png" class="mainLogo"></h1>
         </div><!-- /mainVisual -->
@@ -95,11 +95,43 @@
                 </section>
 
                 <section id="fourth4">
-                    <h3>販売中のロスレスブーケ</h3>
+                    <!-- <h3>販売中のロスレスブーケ</h3>
                     <p>ほぼ毎日新作ブーケ入荷中！アプリからご注文いただけます。</p>
-                    <div class="fourth4-1">
-                        <img src="">
-                        <p></p>
+                -->
+                    <div class="fourth4-inner">
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/1.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No1</span>
+                        </a>
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/2.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No2</span>
+                        </a>
+                        
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/3.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No3</span>
+                        </a>
+                        
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/4.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No4</span>
+                        </a>
+                        
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/5.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No5</span>
+                        </a>
+                        
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/6.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No6</span>
+                        </a>
+                        
+                        <a href="#" class="fourth4-thumbnail">
+                            <img class="fourth4-image" src="images/fourth4/7.png" alt="">
+                            <span class="fourth4-title">本日の〇〇 No7</span>
+                        </a>
                     </div>
                 </section>
 
@@ -260,7 +292,6 @@
                     </ul>
                 </section>
             </main><!-- /main -->
-
     
             <footer id="footer">                
                 <ul class="footer-ul1">
@@ -283,6 +314,54 @@
             </footer><!-- /footer -->            
         </div>
 
+
+
+        <!-- サポートボタン -->
+        <div id="supportButton">
+            <i class="fa fa-question"></i>サポート
+        </div>
+
+        <!-- フォームのコンテナ --> 
+        <div id="formContainer">
+            <!-- フォームのヘッダー -->
+            <div id="formHeader">
+                <button id="closeFormButton" ><hr></button> <!-- クローズボタン -->
+            <h3>お問い合わせ</h3>        
+            </div>
+
+            <div id="formMain">
+                <section id="mail">
+                    <p>FLOWER</p>
+                    <label for="email">
+                        <h4>メールアドレス</h4>
+                    </label>
+                    <input type="email" id="email">
+                </section>
+                
+                <section id="text">
+                    <label for="description">
+                        <h4>説明</h4>
+                        <p>
+                            届いた商品の不備についてお問い合わせの場合は、お手数ですが写真をご用意ください💁‍♀️
+                        </p>
+                        <textarea id="description"></textarea>
+                    </label>                  
+                    
+                </section>
+                
+                <section id="file">
+                    <label>
+                        <h4>添付ファイル</h4>
+                    </label>
+                    <input type="file" class="form-input" id="file-upload" multiple style="width: 100%;" accept="image/*,application/pdf">
+                    <p>5個までファイル追加可能</p>
+                </section>        
+            </div>
+
+            <div id="formFooter">
+                <button type="submit">送信</button>
+            </div>    
+        </div><!-- /formContainer --> 
 
     </body>
 </html>
