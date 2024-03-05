@@ -95,9 +95,9 @@
                 </section>
 
                 <section id="fourth4">
-                    <!-- <h3>販売中のロスレスブーケ</h3>
+                    <h3>販売中のロスレスブーケ</h3>
                     <p>ほぼ毎日新作ブーケ入荷中！アプリからご注文いただけます。</p>
-                -->
+               
                     <div class="fourth4-inner">
                         <a href="#" class="fourth4-thumbnail">
                             <img class="fourth4-image" src="images/fourth4/1.png" alt="">
@@ -341,20 +341,24 @@
                 <section id="text">
                     <label for="description">
                         <h4>説明</h4>
+                    </label> 
                         <p>
                             届いた商品の不備についてお問い合わせの場合は、お手数ですが写真をご用意ください💁‍♀️
                         </p>
+                    <label for="description">    
                         <textarea id="description"></textarea>
                     </label>                  
                     
                 </section>
                 
-                <section id="file">
-                    <label>
-                        <h4>添付ファイル</h4>
+                <section id="fileUpload">
+                    <label for="file">
+                        <h4 class="file-h4">添付ファイル</h4>
                     </label>
-                    <input type="file" class="form-input" id="file-upload" multiple style="width: 100%;" accept="image/*,application/pdf">
-                    <p>5個までファイル追加可能</p>
+                    <label class="file-label" >
+                        <i class="fa fa-paperclip"></i>5個までファイル追加可能
+                        <input id="file" type="file" name="file">
+                    </label>                    
                 </section>        
             </div>
 

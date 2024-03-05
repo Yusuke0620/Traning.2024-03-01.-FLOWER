@@ -493,14 +493,15 @@ p {
   border-radius: 50px;
   opacity: 1;
 }
-#supportButton:focus {
-  box-shadow: inset 0 0 0 4px #9da5b3; /* 内側に黒い4pxの線を引く */
+#supportButton:active {
+  box-shadow: inset 0 0 0 4px #5e646e; /* 内側に黒い4pxの線を引く */
 }
 #supportButton .fa {
   margin-right: 10px;
 }
 
 #formContainer {
+  display: none;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -508,11 +509,11 @@ p {
   border-radius: 10px;
   overflow: hidden;
   z-index: 1000;
-  display: none;
   width: 340px;
   height: 540px;
   font-size: 0.875rem;
-  background-color: #F6F5F1;
+  color: #68737D;
+  background-color: #fff;
 }
 #formContainer #formHeader {
   display: flex;
@@ -551,6 +552,8 @@ p {
 }
 #formContainer #formMain {
   padding: 12px 20px;
+  height: 430px;
+  box-shadow: inset 0px -10px 20px -8px rgb(233, 235, 237);
 }
 #formContainer #formMain input, #formContainer #formMain textarea {
   width: 100%;
@@ -562,6 +565,10 @@ p {
 #formContainer #formMain input:hover, #formContainer #formMain textarea:hover {
   border: 1px solid rgb(87, 87, 87); /* マウスカーソルが要素の上にある時に青い枠線を表示 */
 }
+#formContainer #formMain input:focus, #formContainer #formMain textarea:focus {
+  box-shadow: 0 0 0 3px #D9D9D9; /* 外側に青い色を付ける */
+  border: 1px solid rgb(87, 87, 87); /* マウスカーソルが要素の上にある時に青い枠線を表示 */
+}
 #formContainer #formMain input {
   height: 40px;
 }
@@ -570,6 +577,7 @@ p {
   resize: none;
 }
 #formContainer #formMain h4 {
+  color: #485158;
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -580,9 +588,40 @@ p {
   margin: 5px 0 10px;
   display: inline-block;
 }
+#formContainer #formMain #text h4 {
+  margin: 17px 0 7px;
+}
 #formContainer #formMain #text p {
   font-size: 0.75rem;
   line-height: normal;
+  margin-bottom: 8px;
+}
+#formContainer #formMain #fileUpload h4 {
+  margin-top: 13px;
+}
+#formContainer #formMain #fileUpload input[type=file] {
+  display: none;
+}
+#formContainer #formMain #fileUpload .file-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 2px dashed #DCDFE1;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+#formContainer #formMain #fileUpload .file-label:hover,
+#formContainer #formMain #fileUpload .file-label.hover { /* .hoverクラスが追加された時と:hoverの時に適用されるスタイル */
+  background-color: #f5f5f5;
+}
+#formContainer #formMain #fileUpload .fa {
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 #formContainer #formFooter {
   display: flex;
@@ -590,35 +629,21 @@ p {
   align-items: center;
   background-color: #ffffff;
   height: 66px;
-  padding: 20px;
+  padding: 19px;
 }
 #formContainer #formFooter button {
-  padding: 10px 15px;
+  padding: 8px 14px;
   color: #ffffff;
   background-color: #3F434A;
   border-radius: 5px;
 }
 
-/* 既存のスタイルに加えて */
-.form-input, .form-textarea, .form-file-upload, .form-submit-button {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.form-textarea {
-  height: 100px;
-}
-
-.show-form {
-  display: block;
-}
-
-.hide-button {
-  display: none;
-}
-
-/* レスポンシブ・ブレークポイント599px
+/* JavaScript
 ------------------------------- */
+.hover { /* .hoverクラスが追加された時と:hoverの時に適用されるスタイル */
+  background-color: #f5f5f5;
+}
+
 /* レスポンシブ・ブレークポイント599px
 ------------------------------- */
 @media screen and (max-width: 599px) {
