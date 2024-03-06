@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino  Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.06rem;
 }
 
@@ -40,6 +40,10 @@ p {
   line-height: 26px;
 }
 
+.text {
+  display: inline-block;
+}
+
 /* 横幅を設定するための共通クラス */
 .container {
   text-align: center;
@@ -62,14 +66,16 @@ p {
   background-image: url("../images/mainVisual.jpg");
   background-position: center bottom;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
 }
 #mainVisual .mainLogo {
   width: 228px;
   position: absolute;
-  top: 50%;
+  top: 48.5%;
   left: 50%;
   transform: translate(-50%, -50%);
+  filter: drop-shadow(2px 2px 7px rgba(116, 116, 116, 0.5));
+  filter: drop-shadow(-2px -2px -5px rgba(116, 116, 116, 0.5));
 }
 
 /*-------------------------------------------
@@ -97,18 +103,29 @@ p {
 #second2 .second2-1 {
   width: 56%;
   text-align: left;
+  position: relative;
 }
 #second2 .second2-1 p {
   margin: 20px 0 33px;
 }
 #second2 .second2-1 .second2-navLink {
   display: flex;
+  justify-content: center;
+  gap: 16px;
 }
-#second2 .second2-1 .second2-navLink img {
+#second2 .second2-1 .second2-navLink .downLoad1,
+#second2 .second2-1 .second2-navLink .downLoad2 {
   /* 画像のサイズをそのまま維持する */
   width: 165px;
   height: 50px;
-  margin-right: 16px;
+  background-size: cover;
+}
+#second2 .second2-1 .second2-navLink .downLoad1 {
+  background-image: url("../images/APP.png");
+  border-radius: 5px;
+}
+#second2 .second2-1 .second2-navLink .downLoad2 {
+  background-image: url("../images/Google.png");
 }
 #second2 img {
   width: 40%;
@@ -198,7 +215,10 @@ p {
 -------------------------------------------*/
 #fourth4 {
   background-color: #F6F5F1;
-  padding-top: 60px;
+  padding: 60px 0;
+}
+#fourth4 p {
+  margin: 15px 0 17px;
 }
 #fourth4 .fourth4-inner {
   display: flex; /* 要素をフレックスボックスとして表示 */
@@ -206,7 +226,7 @@ p {
   overflow: scroll; /* コンテンツが要素のサイズを超える場合にスクロールバーを表示 */
   scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
   -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
-  padding: 0 24px; /* 上下左右に24pxのパディングを持つ */
+  padding: 0 24px; /* 左右に24pxのパディングを持つ */
 }
 #fourth4 .fourth4-inner a {
   display: inline-block; /* インラインブロック要素として表示 */
@@ -365,7 +385,6 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 0 24px;
-  flex-wrap: wrap;
 }
 #eighth8 .eighth8-1 img {
   width: auto;
@@ -484,6 +503,7 @@ p {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 1000;
   padding: 15px 25px;
   background-color: #3F434A;
   color: #ffffff;
@@ -508,7 +528,7 @@ p {
   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 2000;
   width: 340px;
   height: 540px;
   font-size: 0.875rem;
@@ -638,6 +658,42 @@ p {
   border-radius: 5px;
 }
 
+/*-------------------------------------------
+スクロールフッター
+-------------------------------------------*/
+#scrollFooter {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100px;
+}
+#scrollFooter .scrollFooter-navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+#scrollFooter .scrollFooter-navLink .downLoad1,
+#scrollFooter .scrollFooter-navLink .downLoad2 {
+  /* 画像のサイズをそのまま維持する */
+  width: 165px;
+  height: 50px;
+  background-size: cover;
+}
+#scrollFooter .scrollFooter-navLink .downLoad1 {
+  background-image: url("../images/APP.png");
+  border-radius: 5px;
+}
+#scrollFooter .scrollFooter-navLink .downLoad2 {
+  background-image: url("../images/Google.png");
+}
+
 /* JavaScript
 ------------------------------- */
 .hover { /* .hoverクラスが追加された時と:hoverの時に適用されるスタイル */
@@ -653,7 +709,213 @@ p {
   h3 {
     font-size: 1.375rem;
   }
+  /*-------------------------------------------
+  #mainVisual
+  -------------------------------------------*/
+  #mainVisual {
+    background-image: url(https://s3-ap-northeast-1.amazonaws.com/flower-production-assets/assets/web/home/header_bg_S-f71516121ee5fedc0f61396d86e980a54f719b57898be4e5d391ed1e0768aefa.jpg);
+    height: 80vh;
+  }
+  #mainVisual .mainLogo {
+    width: 175px;
+  }
+  /*-------------------------------------------
+  #second2
+  -------------------------------------------*/
+  #second2 {
+    padding: 50px 22px;
+  }
+  #second2 .inner {
+    flex-direction: column-reverse;
+  }
+  #second2 .inner .second2-1 {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #second2 .inner .second2-1 h3 {
+    margin-top: 40px;
+    text-align: center;
+  }
+  #second2 .inner img {
+    width: 439px;
+  }
+  /*-------------------------------------------
+  #third3
+  -------------------------------------------*/
+  #third3 .thinner {
+    flex-direction: column;
+  }
+  #third3 .third3-1, #third3 .third3-2, #third3 .third3-3 {
+    flex-direction: column;
+    text-align: center;
+    height: 523px;
+    padding: 0;
+  }
+  #third3 .third3-1-1, #third3 .third3-2, #third3 .third3-3-1 {
+    width: 100%;
+  }
+  #third3 .big-bg1 {
+    width: 100%;
+  }
+  #third3 .big-bg2 {
+    background-position: top left;
+  }
+  #third3 h3 {
+    text-align: center;
+    padding: 0 20px;
+  }
+  #third3 p {
+    padding: 10px 20px 20px;
+    margin: 0;
+  }
+  /*-------------------------------------------
+  #fourth4
+  -------------------------------------------*/
+  #fourth4 {
+    padding: 60px 20px;
+  }
+  #fourth4 .fourth4-inner {
+    padding: 0;
+  }
+  #fourth4 .fourth4-inner a {
+    min-width: 36vw;
+  }
+  /*-------------------------------------------
+  #fifth5
+  -------------------------------------------*/
+  .fifth5-1-items {
+    justify-content: start;
+    overflow: scroll; /* 横方向スクロールを有効化 */
+    scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+    -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+    padding: 0 25vw;
+  }
+  .fifth5-1-items img {
+    width: 40px;
+  }
+  .fifth5-1-items .fifth5-1-1-item {
+    display: block; /* 子要素をインラインブロック要素として扱う */
+    min-width: 55vw; /* 幅の自動調整 */
+    word-break: break-all; /* 単語の途中で改行可能 */
+    text-align: center;
+    margin-top: 10px;
+  }
+  .fifth5-1-items .fifth5-1-1-item img {
+    width: 150px; /* 画像の幅を自動調整 */
+  }
+  .fifth5-1-items .fifth5-1-1-item p {
+    text-align: justify;
+  }
+  /*-------------------------------------------
+  #sixth6
+  -------------------------------------------*/
+  #sixth6 h3 {
+    padding-bottom: 25px;
+  }
+  #sixth6 .sixth6-1 {
+    padding: 0 25px;
+    grid-template-columns: 1fr 1fr;
+  }
+  #sixth6 button {
+    margin-top: 20px;
+  }
+  /*-------------------------------------------
+  #seventh7
+  -------------------------------------------*/
+  #seventh7 .seventh7-1 {
+    justify-content: start;
+    gap: 25px;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+    -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+    padding: 0 25px;
+    margin-top: 20px;
+  }
+  #seventh7 .seventh7-1 .seventh7-1-1-item {
+    display: block; /* 子要素をインラインブロック要素として扱う */
+    min-width: 75vw; /* 幅の自動調整 */
+    word-break: break-all; /* 単語の途中で改行可能 */
+    text-align: center;
+  }
+  #seventh7 .seventh7-1 .seventh7-1-1-item .seventh7-1-1-1 {
+    padding: 25px;
+  }
+  /*-------------------------------------------
+  #eighth8
+  -------------------------------------------*/
+  #eighth8 .eighth8-1 {
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+    -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+    padding: 0 25px;
+  }
+  #eighth8 .eighth8-1 li {
+    min-width: 165px;
+    height: 46px;
+  }
+  #eighth8 .eighth8-1 img {
+    display: block; /* 子要素をインラインブロック要素として扱う */
+    word-break: break-all; /* 単語の途中で改行可能 */
+    height: 45px;
+  }
+  /*-------------------------------------------
+  #ninth9
+  -------------------------------------------*/
+  #ninth9 {
+    text-align: justify;
+  }
+  #ninth9 dl dt {
+    font-size: 1rem;
+    line-height: 29px;
+  }
+  #ninth9 dl dd {
+    font-size: 0.875rem;
+    line-height: 25px;
+  }
+  /*-------------------------------------------
+  #tenth10
+  -------------------------------------------*/
+  #tenth10 {
+    height: 360px;
+  }
+  #tenth10 .tenth10-logo, #tenth10 .tenth10-navLink, #tenth10 p {
+    display: none;
+  }
+  /*-------------------------------------------
+  #footer
+  -------------------------------------------*/
+  #footer {
+    padding: 60px 25px 120px;
+  }
+  #footer .footer-ul1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #footer .footer-ul2 {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #footer p {
+    text-align: left;
+  }
+  /*-------------------------------------------
+  サポートボタン
+  -------------------------------------------*/
+  #supportButton {
+    width: 50px;
+    height: 50px;
+  }
+  #supportButton .fa {
+    margin-right: 0;
+    padding-right: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+  }
+  .support {
+    display: none;
+  }
 }
-/*-------------------------------------------
-
--------------------------------------------*/

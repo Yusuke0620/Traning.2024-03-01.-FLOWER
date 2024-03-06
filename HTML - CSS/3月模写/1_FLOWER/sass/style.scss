@@ -12,13 +12,16 @@ $mainColor: rgb(63, 67, 74);  // 文字色
 
 *    { box-sizing: border-box; }
 html { font-size: 100%; color: $mainColor;}
-body { font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.06rem;}
+body { font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino  Gothic Pro", "ヒラギノ角ゴ Pro W3", "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.06rem;}
 li   { list-style: none; }
 a    { text-decoration: none; }
 img { max-width: 100%; }
 h2 { font-size: 1.8125rem; line-height: 46px; }
 h3 { font-size: 1.625rem; }
 p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
+.text {
+    display: inline-block;
+}
 
 /* 横幅を設定するための共通クラス */
 .container {
@@ -39,14 +42,16 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
     background-image: url("../images/mainVisual.jpg");
     background-position: center bottom;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
 
     .mainLogo {
         width: 228px;
         position: absolute;
-        top: 50%;
+        top: 48.5%;
         left: 50%;
         transform: translate(-50%, -50%);
+        filter: drop-shadow(2px 2px 7px rgba(116, 116, 116, 0.5));
+        filter: drop-shadow(-2px -2px -5px rgba(116, 116, 116, 0.5));
     }
 }
 
@@ -69,24 +74,34 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
 #second2 {
     background-color: #F6F5F1;
     padding: 80px 0;
-
     .inner {
         display: flex;
     }
-
     .second2-1 {
         width: 56%;
         text-align: left;
+        position: relative;
         p {          
             margin: 20px 0 33px;            
         }
         .second2-navLink {
             display: flex;
-            img {
+            justify-content: center;
+            gap: 16px;      
+
+            .downLoad1,
+            .downLoad2 {
                 /* 画像のサイズをそのまま維持する */
                 width: 165px;
                 height: 50px;
-                margin-right: 16px;
+                background-size: cover;
+            }
+            .downLoad1 {
+                background-image: url("../images/APP.png");
+                border-radius: 5px;
+            }
+            .downLoad2 {
+                background-image: url("../images/Google.png");
             }
         }
     }
@@ -181,14 +196,17 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
 -------------------------------------------*/
 #fourth4 {
     background-color: #F6F5F1;
-    padding-top: 60px;
+    padding: 60px 0;
+    p {
+        margin: 15px 0 17px;
+    }
     .fourth4-inner {
         display: flex; /* 要素をフレックスボックスとして表示 */
         gap: 24px;     /* 子要素間の間隔を24pxに設定 */
         overflow: scroll; /* コンテンツが要素のサイズを超える場合にスクロールバーを表示 */
         scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
         -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
-        padding: 0 24px; /* 上下左右に24pxのパディングを持つ */
+        padding: 0 24px; /* 左右に24pxのパディングを持つ */
     
         a {
             display: inline-block; /* インラインブロック要素として表示 */        
@@ -227,8 +245,7 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
     @include flexMode(center);
     gap: 0px 24px;
     img {
-        width: 70px;
-       
+        width: 70px;       
     }
 
     .fifth5-1-1-item {
@@ -353,7 +370,6 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
         @include flexMode(center);
         flex-wrap: wrap;
         gap: 0 24px;
-        flex-wrap: wrap;
 
         img {
             width: auto;  
@@ -433,8 +449,6 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
 #footer {
     background-color: #3F434A;
     padding: 60px 20px 40px;
-
-
     
     .footer-ul1 {
         @include flexMode(center);
@@ -448,8 +462,7 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
     .footer-ul2 {
         @include flexMode(center);
         gap: 24px;
-        margin-top: 50px;
-        
+        margin-top: 50px;        
         img {
             width: 32px;
         }
@@ -476,6 +489,7 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 1000;
     padding: 15px 25px;
     background-color: #3F434A;
     color: #ffffff;
@@ -492,22 +506,20 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
     }
 }
   
-  #formContainer {
-    
-    display: none; //普段は非表示
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 1000;
-    
-    width: 340px;
-    height: 540px;    
-    font-size: 0.875rem;
-    color: #68737D;
-    background-color: #fff;
+#formContainer {   
+display: none; 
+position: fixed;
+right: 20px;
+bottom: 20px;
+box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.1);
+border-radius: 10px;
+overflow: hidden;
+z-index: 2000;
+width: 340px;
+height: 540px;    
+font-size: 0.875rem;
+color: #68737D;
+background-color: #fff;
 
     #formHeader {
         @include flexMode(center);
@@ -562,15 +574,9 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
                 border: 1px solid rgb(87, 87, 87); /* マウスカーソルが要素の上にある時に青い枠線を表示 */
             }
         }
-    
-        input {                
-            height: 40px;                
-        }        
-        textarea {
-            height: 100px;
-            resize: none;
-        }
 
+        input { height: 40px; }        
+        textarea { height: 100px; resize: none; }
         h4 {
             color: #485158;
             font-size: 0.75rem;
@@ -615,12 +621,12 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
                 border: 2px dashed #DCDFE1;
                 border-radius: 5px;
                 transition: all 0.3s;
-              }
-              .file-label:hover,
-              .file-label.hover { /* .hoverクラスが追加された時と:hoverの時に適用されるスタイル */
-                  background-color: #f5f5f5;
-              }
-                       
+                }
+                .file-label:hover,
+                .file-label.hover { /* .hoverクラスが追加された時と:hoverの時に適用されるスタイル */
+                    background-color: #f5f5f5;
+                }
+                        
             .fa {
                 margin-right: 10px;
                 font-size: 1.5rem;
@@ -640,25 +646,307 @@ p { font-size: 0.9375rem; letter-spacing: 0.03rem; line-height: 26px; }
             border-radius: 5px;
         }
     }
-  }
+}
 
+/*-------------------------------------------
+スクロールフッター
+-------------------------------------------*/
+    #scrollFooter {       
+        display: none; //通常は非表示
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background-color: rgba( 255, 255, 255, 0.8);
+        width: 100%;
+        height: 100px;
 
+        .scrollFooter-navLink {  
+            @include flexMode(center);
+            gap: 18px;    
+            margin-top: 25px;
+
+            .downLoad1,
+            .downLoad2 {
+                /* 画像のサイズをそのまま維持する */
+                width: 165px;
+                height: 50px;
+                background-size: cover;
+            }
+            .downLoad1 {
+                background-image: url("../images/APP.png");
+                border-radius: 5px;
+            }
+            .downLoad2 {
+                background-image: url("../images/Google.png");
+            }
+        }        
+    }
 
 
 /* JavaScript
 ------------------------------- */
 .hover { /* .hoverクラスが追加された時と:hoverの時に適用されるスタイル */
     background-color: #f5f5f5;
-}              
-
+}
 
 /* レスポンシブ・ブレークポイント599px
 ------------------------------- */
 @media screen and (max-width:599px) {
     h2 { font-size: 1.625rem; }
     h3 { font-size: 1.375rem; }
-}
-/*-------------------------------------------
 
+/*-------------------------------------------
+#mainVisual
 -------------------------------------------*/
 
+    #mainVisual {
+        background-image: url(https://s3-ap-northeast-1.amazonaws.com/flower-production-assets/assets/web/home/header_bg_S-f71516121ee5fedc0f61396d86e980a54f719b57898be4e5d391ed1e0768aefa.jpg);
+        height: 80vh;
+
+        .mainLogo {
+            width: 175px;
+        }
+    }
+
+/*-------------------------------------------
+#second2
+-------------------------------------------*/
+
+    #second2 {
+        padding: 50px 22px;
+        .inner {
+            flex-direction: column-reverse;
+            .second2-1 {
+                width: 100%;
+                padding: 0 20px;
+                h3 {
+                    margin-top: 40px;
+                    text-align: center;
+                }
+
+            }
+            img {
+                width: 439px;                
+            }
+        }
+    }
+
+/*-------------------------------------------
+#third3
+-------------------------------------------*/
+
+    #third3 {
+        .thinner {
+            flex-direction: column;
+        }
+        .third3-1,.third3-2, .third3-3 {
+            flex-direction: column;
+            text-align: center;
+            height: 523px;
+            padding: 0;
+        }
+
+        .third3-1-1, .third3-2, .third3-3-1 {               
+            width: 100%;
+        }
+        .big-bg1 {
+            width: 100%;
+        }
+        .big-bg2 {
+            background-position: top left;
+        }
+
+        h3 {
+            text-align: center;
+            padding: 0 20px;
+        }
+        p {
+            padding: 10px 20px 20px;
+            margin: 0;
+        }
+    }
+
+/*-------------------------------------------
+#fourth4
+-------------------------------------------*/
+    #fourth4 {
+        padding: 60px 20px;
+
+        .fourth4-inner {
+            padding: 0;
+            a {
+                min-width: 36vw;
+            }
+        }        
+    }
+
+/*-------------------------------------------
+#fifth5
+-------------------------------------------*/
+ 
+    .fifth5-1-items {
+        justify-content: start;
+        overflow: scroll; /* 横方向スクロールを有効化 */
+        scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+        -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+        padding: 0 25vw;
+
+        img {
+            width: 40px;
+        }
+
+        .fifth5-1-1-item {
+            display: block; /* 子要素をインラインブロック要素として扱う */
+            min-width: 55vw; /* 幅の自動調整 */
+            word-break: break-all; /* 単語の途中で改行可能 */
+            text-align: center;   
+            margin-top: 10px;             
+            img {
+                width: 150px; /* 画像の幅を自動調整 */
+            }
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+/*-------------------------------------------
+#sixth6
+-------------------------------------------*/   
+    
+    #sixth6 {
+        h3 {
+            padding-bottom: 25px; 
+        }
+        .sixth6-1 {
+            padding: 0 25px;
+            grid-template-columns: 1fr 1fr;          
+        }
+        button {
+            margin-top: 20px;
+        }
+    } 
+
+/*-------------------------------------------
+#seventh7
+-------------------------------------------*/    
+    #seventh7 {
+        .seventh7-1 {
+            justify-content: start;
+            gap: 25px;
+            overflow: scroll;
+            scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+            -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+            padding: 0 25px;
+            margin-top: 20px;    
+            
+            .seventh7-1-1-item {
+                display: block; /* 子要素をインラインブロック要素として扱う */
+                min-width: 75vw; /* 幅の自動調整 */
+                word-break: break-all; /* 単語の途中で改行可能 */
+                text-align: center;    
+
+                .seventh7-1-1-1 {
+                    padding: 25px;
+                }
+            }
+        }
+    }
+
+/*-------------------------------------------
+#eighth8
+-------------------------------------------*/
+    #eighth8 {
+        .eighth8-1 {
+            justify-content: start;      
+            flex-wrap: nowrap;      
+            overflow: scroll;
+            scrollbar-width: none; /* Firefox対応のスクロールバー非表示 */
+            -ms-overflow-style: none; /* Internet Explorer対応のスクロールバー非表示 */
+            padding: 0 25px;
+
+            li {
+                min-width: 165px;
+                height: 46px;
+            }
+
+            img {
+                display: block; /* 子要素をインラインブロック要素として扱う */
+                word-break: break-all; /* 単語の途中で改行可能 */
+                height: 45px;
+            }
+        }
+    }
+
+/*-------------------------------------------
+#ninth9
+-------------------------------------------*/
+
+    #ninth9 {
+        text-align: justify;
+        dl {
+            dt {
+                font-size: 1rem;
+                line-height: 29px;
+            }
+            dd {
+                font-size: 0.875rem;
+                line-height: 25px;
+            }
+        }        
+    }
+
+/*-------------------------------------------
+#tenth10
+-------------------------------------------*/
+
+    #tenth10 {
+        height: 360px;
+
+        .tenth10-logo, .tenth10-navLink, p {
+            display: none;
+        }
+    }
+
+/*-------------------------------------------
+#footer
+-------------------------------------------*/
+
+    #footer {
+        padding: 60px 25px 120px;
+
+        .footer-ul1 {
+            flex-direction: column;
+            align-items: flex-start;           
+        }
+        .footer-ul2 {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        p {
+            text-align: left;
+        }
+    }
+
+/*-------------------------------------------
+サポートボタン
+-------------------------------------------*/
+
+    #supportButton {     
+        width: 50px;
+        height: 50px;  
+        .fa {
+            margin-right: 0;
+            padding-right: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-25%, -50%);
+        }
+        }
+        .support {
+            display: none;
+        }
+    }

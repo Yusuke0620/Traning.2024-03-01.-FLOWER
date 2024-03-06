@@ -16,40 +16,51 @@
 
     <body class="pages_controller">
         <div id="mainVisual">
-            <h1><img src="./images/mainLogo.png" class="mainLogo"></h1>
+            <h1>
+                <img src="./images/mainLogo.png" class="mainLogo">
+            </h1>
         </div><!-- /mainVisual -->
 
         <div class="container">
             <main>
                 <section id="first1">
                     <h2>
-                        暮らしを変える、 たっぷりの花<br>
-                        送料込み2,200円。
-                    </h2>
-                    <p>
+                        <span class="text">暮らしを変える、 </span>
+                        <span class="text">たっぷりの花</span> <br>
+                        <span class="text">送料込み2,200円。</span>
+                    </h2>                     
+                     <p>
                         花を飾ると、暮らしがもっと好きになる。<br>
                         だからFLOWERは、かわいくてうきうきするような花を、ふだん使いできる価格に。
                     </p>
-                </section>
+                </section><!-- /first1 -->
     
                 <section id="second2">
                     <div class="inner">
-                        <div class="second2-1">
+                        <div class="second2-1">                            
                             <h3>
-                                理想のお花屋さんを、<br>
-                                あなたの手の中に。
+                                <span class="text">理想のお花屋さんを、</span>
+                                <span class="text">あなたの手の中に。</span>
                             </h3>
                             <p>
                                 旬の花をぜいたくに使ったこだわりのブーケを毎週販売。かわいいのに、いつも特別価格。新作の入荷はアプリがお知らせ。お家にいながら、たっぷりの花がある暮らし。あなたもはじめませんか？
                             </p>
                             <ul class="second2-navLink">
-                                <li><a href="#"><img src="images/APP.png" class="downLoad"></a></li>
-                                <li><a href="#"><img src="images/Google.png" class="downLoad"></a></li>
+                                <li>
+                                    <a href="#">
+                                        <div  class="downLoad1"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div  class="downLoad2"></div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <img src="images/second2.png">
                     </div>                        
-                </section>
+                </section><!-- /second2 -->
     
                 <section id="third3">
                     <div class="big-bg1">
@@ -96,7 +107,9 @@
 
                 <section id="fourth4">
                     <h3>販売中のロスレスブーケ</h3>
-                    <p>ほぼ毎日新作ブーケ入荷中！アプリからご注文いただけます。</p>
+                    <p>
+                        ほぼ毎日新作ブーケ入荷中！アプリからご注文いただけます。
+                    </p>
                
                     <div class="fourth4-inner">
                         <a href="#" class="fourth4-thumbnail">
@@ -168,7 +181,10 @@
     
                 <section id="sixth6">
                     <div class="inner">
-                        <h3>みんなの 「FLOWERのある暮らし」</h3>
+                        <h3>
+                            <span class="text">みんなの </span>
+                            <span class="text">「FLOWERのある暮らし」</span>
+                        </h3>
                         <div class="sixth6-1">                            
                             <div class="sixth6-1-1-item">
                                 <img src="images/sixth6/instagram_post01-bf81d1f9d44f1ab0e9b32d21d16bfe864fd672a32dd649cc4db1977f1c306c4a.jpg">
@@ -201,7 +217,10 @@
     
                 <section id="seventh7">
                     <div class="inner">
-                        <h3>あなたに合ったスタイルで 楽しもう</h3>
+                        <h3>
+                            <span class="text">あなたに合ったスタイルで </span>
+                            <span class="text">楽しもう</span>
+                        </h3>
                         <div class="seventh7-1">
                             <div class="seventh7-1-1-item">
                                 <img src="images/seventh7/lineup_thumb01-cc43d2971669590061fab3bb5fb7ea5ce90d93bf7bd4cba8fbbf400cd5585db3.jpg">
@@ -284,7 +303,7 @@
                 </section>
     
                 <section id="tenth10">
-                    <img src="images/mainLogo.png" class="tenth10-logo">
+                    <img class="tenth10-logo" src="images/mainLogo.png" >
                     <p>かわいいが届くお花便</p>
                     <ul class="tenth10-navLink">
                         <li><a href="#"><img src="images/APP.png" class="downLoad"></a></li>
@@ -314,12 +333,11 @@
             </footer><!-- /footer -->            
         </div>
 
-
-
         <!-- サポートボタン -->
         <div id="supportButton">
-            <i class="fa fa-question"></i>サポート
+            <i class="fa fa-question"></i><span class="support">サポート</span>
         </div>
+        <div class="formDecoy"></div>
 
         <!-- フォームのコンテナ --> 
         <div id="formContainer">
@@ -347,8 +365,7 @@
                         </p>
                     <label for="description">    
                         <textarea id="description"></textarea>
-                    </label>                  
-                    
+                    </label>                    
                 </section>
                 
                 <section id="fileUpload">
@@ -366,6 +383,22 @@
                 <button type="submit">送信</button>
             </div>    
         </div><!-- /formContainer --> 
+
+        <!-- スクロールフッター -->
+        <div id="scrollFooter">
+            <ul class="scrollFooter-navLink">
+                <li>
+                    <a href="#">
+                        <div  class="downLoad1"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div  class="downLoad2"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
     </body>
 </html>
